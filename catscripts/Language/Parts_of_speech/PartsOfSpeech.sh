@@ -1,13 +1,13 @@
 #!/bin/bash
 
-egrep -i '\bnoun(|s)\b|pronoun(|s)\b|\bverb(|s)\b|adverb|adjective|preposition|conjunction|participle|interjection|part(|s)(| )of(| )speech' newpages.txt >> PartsOfSpeech.txt
+egrep -i '\bnom(|s)\b|pronoms(|s)\b|\bverbe(|s)\b|adverbe|adjecti(f|ve)|pr(é|e)position|conjonction|participe|interjection|parti(es|s|e) (de|du) discours' newpages.txt >> PartsOfSpeech.txt
 
 SPEECH=`stat --print=%s PartsOfSpeech.txt`
 
 if [ $SPEECH -ne 0 ];
 then
   export CATFILE="PartsOfSpeech.txt"
-  export CATNAME="Parts of speech"
+  export CATNAME="Parties de discours"
   $CATEGORIZE
 fi
 

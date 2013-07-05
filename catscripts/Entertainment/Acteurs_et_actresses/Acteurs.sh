@@ -5,7 +5,7 @@ then
   printf "Starting Actors and actresses\n" 
 fi
 
-export CURRENTDIR="./catscripts/Entertainment/Actors_and_actresses"
+export CURRENTDIR="./catscripts/Entertainment/Acteurs_et_actresses"
 
 . $CURRENTDIR/Orlando_Bloom/OrlandoBloom.sh #$KEYWORDS_ACTOR_ORLANDOBLOOM
 . $CURRENTDIR/Sandra_Bullock/SandraBullock.sh #$KEYWORDS_ACTRESS_SANDRABULLOCK
@@ -44,14 +44,14 @@ export KEYWORDS_ACTRESS_EXEMPT="Demi(| )Lovato|Vanessa(| )Hudgens|Ashley(| )Tisd
 
 export KEYWORDS_ACTOR_INCLUDE="Jet(| )Li\b|Jason(| )Statham|Robin(| )Williams"
 
-egrep -i "\bactor|actress|$KEYWORDS_ACTOR_INCLUDE" newpages.txt | egrep -iv "$KEYWORDS_ACTOR|$KEYWORDS_ACTRESS|$KEYWORDS_ACTRESS_EXEMPT" >> Actors.txt
+egrep -i "\bacteur|actress|$KEYWORDS_ACTOR_INCLUDE" newpages.txt | egrep -iv "$KEYWORDS_ACTOR|$KEYWORDS_ACTRESS|$KEYWORDS_ACTRESS_EXEMPT" >> Actors.txt
 
 ACTORS=`stat --print=%s Actors.txt`
 
 if [ $ACTORS -ne 0 ];
 then
   export CATFILE="Actors.txt"
-  export CATNAME="Actors and actresses"
+  export CATNAME="Acteur et actresses"
   $CATEGORIZE
 fi
 

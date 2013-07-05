@@ -36,18 +36,18 @@ python $PYWIKIPEDIADIR/pagegenerators.py -recentchanges -ns:0|sed 's|[0-9][0-9][
 python $PYWIKIPEDIADIR/pagegenerators.py -randomredirect:1 -ns:0|sed 's|[0-9][0-9][0-9]: |\* \[\[|'| sed 's|[0-9][0-9]: |\* \[\[|' | sed 's|[0-9]: |\* \[\[|' | sed 's:$:]]:' >> newpages.txt
  
 ./catscripts/Entertainment/Entertainment.sh
-./catscripts/Government/Government.sh
-./catscripts/Language/Language.sh
-./catscripts/Lifestyle/Lifestyle.sh
-./catscripts/Maintenance/Maintenance.sh
-./catscripts/Math/Math.sh
-./catscripts/Science/Science.sh
-./catscripts/Technology/Technology.sh
-./catscripts/Temp/Temp.sh
-./catscripts/Transportation/Transportation.sh
+#./catscripts/Government/Government.sh
+#./catscripts/Language/Language.sh
+#./catscripts/Lifestyle/Lifestyle.sh
+#./catscripts/Maintenance/Maintenance.sh
+#./catscripts/Math/Math.sh
+#./catscripts/Science/Science.sh
+#./catscripts/Technology/Technology.sh
+#./catscripts/Temp/Temp.sh
+#./catscripts/Transportation/Transportation.sh
 
 #Remove questions that have interrogative words from category 'Page titles lacking an interrogative word'
 
-./util/noninterrogative.sh
+#./util/noninterrogative.sh
 
 rm $PIDFILE

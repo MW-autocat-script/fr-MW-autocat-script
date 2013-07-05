@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'board(| )game' newpages.txt | egrep -iv 'checkers|chess' >> Boardgames.txt
+egrep -i 'Jeux(| )de(| )sociétés' newpages.txt | egrep -iv 'checkers|chess' >> Boardgames.txt
 egrep -i '\bChess\b|Chessboard' newpages.txt | egrep -iv 'Leonard Chess|Chess Roberts|Harry Potter|Smallville|Chess River|River Chess' >> Chess.txt
 egrep -i 'Checkers|Checker(| )board' newpages.txt >> Checkers.txt
 
@@ -11,7 +11,7 @@ CHECKERS=`stat --print=%s Checkers.txt`
 if [ $BOARDGAMES -ne 0 ];
 then
   export CATFILE="Boardgames.txt"
-  export CATNAME="Board games"
+  export CATNAME="Jeux de sociétés"
   $CATEGORIZE
 fi
 

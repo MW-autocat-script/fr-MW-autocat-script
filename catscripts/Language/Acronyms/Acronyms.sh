@@ -5,16 +5,16 @@ then
   printf "Starting Acronyms\n" 
 fi
 
-egrep -i 'acronym|initialism' newpages.txt >> Acronyms.txt
-egrep '\[\[What does [A-Z]{2,} stand for\]\]' newpages.txt >> Acronyms.txt
-egrep '\[\[What do the initials [A-Z]{2,} stand for' newpages.txt >> Acronyms.txt
+egrep -i 'acronyme|initialism' newpages.txt >> Acronyms.txt
+egrep "\[\[Qu'est ce que [A-Z]{2,} veut dire\]\]" newpages.txt >> Acronyms.txt
+egrep "\[\[Qu'est ce que les initial(s|) [A-Z]{2,} (veut|veulent) dire" newpages.txt >> Acronyms.txt
 
 ACRONYMS=`stat --print=%s Acronyms.txt`
 
 if [ $ACRONYMS -ne 0 ];
 then
   export CATFILE="Acronyms.txt"
-  export CATNAME="Acronyms"
+  export CATNAME="Acronymes"
   $CATEGORIZE
 fi
 

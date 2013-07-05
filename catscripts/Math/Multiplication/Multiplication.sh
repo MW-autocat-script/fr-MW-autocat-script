@@ -1,7 +1,7 @@
 #!/bin/bash
 
-egrep -i '[0-9]{1,} times [0-9]{1,}' newpages.txt >> Multiplication.txt
-egrep -i 'What is [0-9]{1,} x [0-9]{1,}' newpages.txt >> Multiplication.txt
+egrep -i '[0-9]{1,} (fois|foix|foi|multiplier par|multiplié par) [0-9]{1,}' newpages.txt >> Multiplication.txt
+egrep -i "C('| |)est quoi [0-9]{1,} x [0-9]{1,}" newpages.txt >> Multiplication.txt
 egrep -i '[0-9]{1,} \* [0-9]{1,}' newpages.txt >> Multiplication.txt
 
 MULTIPLICATION=`stat --print=%s Multiplication.txt`

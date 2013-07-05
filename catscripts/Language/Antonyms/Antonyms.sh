@@ -9,7 +9,7 @@ egrep -i "Quel(le|) est l'oppos(é|e|er|ition) (de|du) [a-z]{1,}" newpages.txt >
 egrep -i "Quel(le|) est l'antonyme de[a-z]{1,}" newpages.txt >> Antonyms.txt
 egrep -i "\[\[antonyme de [a-z]{1,}\]\]" newpages.txt >> Antonyms.txt
 egrep -i "\[\[Antonyme(s|) pour [a-z]{1,}\]\]" newpages.txt >> Antonyms.txt
-egrep -i 'antonym' newpages.txt >> Antonyms.txt
+egrep -i 'antonyme(s|)' newpages.txt >> Antonyms.txt
 
 ANTONYMS=`stat --print=%s Antonyms.txt`
 
@@ -24,5 +24,5 @@ rm Antonyms.txt
 
 if [ "$DEBUG" == "yes" ];
 then
-  printf "Finishing Antonyms\n" 
+  printf "Finishing Antonymes\n" 
 fi

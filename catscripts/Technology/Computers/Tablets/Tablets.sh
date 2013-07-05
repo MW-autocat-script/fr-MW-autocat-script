@@ -2,7 +2,7 @@
 
 egrep -i 'Kindle Fire' newpages.txt >> KindleFire.txt
 egrep -i '\biPad' newpages.txt >> iPad.txt
-egrep -i 'tablet (computer|pc)|Android tablet|Windows 8 tablet' newpages.txt | egrep -iv 'iPad|Kindle Fire' >> Tabletcomputers.txt
+egrep -i "tablet(te|) (d|)('|)(computer|pc|ordinateur)|Android tablet(te|)|tablet(te|) Android|Windows 8 tablet(te|)|tabblet(te|) Windows 8" newpages.txt | egrep -iv 'iPad|Kindle Fire' >> Tabletcomputers.txt
 
 KINDLE=`stat --print=%s KindleFire.txt`
 IPAD=`stat --print=%s iPad.txt`
@@ -25,7 +25,7 @@ fi
 if [ $TABLETS -ne 0 ];
 then
   export CATFILE="Tabletcomputers.txt"
-  export CATNAME="Tablet computers"
+  export CATNAME="Tablette d'ordinateurs"
   $CATEGORIZE
 fi
 

@@ -51,7 +51,7 @@ ACTORS=`stat --print=%s Actors.txt`
 if [ $ACTORS -ne 0 ];
 then
   export CATFILE="Actors.txt"
-  export CATNAME="Acteurs et actresses"
+  export CATNAME="Acteurs et actrices"
   $CATEGORIZE
 fi
 

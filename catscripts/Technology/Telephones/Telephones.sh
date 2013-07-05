@@ -1,6 +1,6 @@
 #!/bin/bash
-egrep -i 'telephone|\bphone|caller ID|call waiting|busy signal' newpages.txt | egrep -iv 'cell(|ullar)(| )phone|mobile (|tele)phone|\bi phone|Nokia' >> Telephones.txt
-egrep -i 'cell(|ular)(| )phone|mobile phone|SIM card|\b(2|3|4)G\b|GPRS' newpages.txt | egrep -iv 'i(| )phone|iPod|Nokia' >> Cellphones.txt
+egrep -i 't(é|e)l(é|e)phone|\bphone|caller ID|call waiting|busy signal' newpages.txt | egrep -iv 'cell(|ullar)(| )phone|mobile (|tele)phone|\bi phone|Nokia' >> Telephones.txt
+egrep -i 'c(é|e)llulaire|cell(|ular)(| )phone|mobile phone|SIM card|\b(2|3|4)G\b|GPRS' newpages.txt | egrep -iv 'i(| )phone|iPod|Nokia' >> Cellphones.txt
 egrep -i 'i(| )phone' newpages.txt >> iPhones.txt
 egrep -i 'Nokia' newpages.txt >> Nokia.txt
 
@@ -12,14 +12,14 @@ NOKIA=`stat --print=%s Nokia.txt`
 if [ $TELEPHONES -ne 0 ];
 then
   export CATFILE="Telephones.txt"
-  export CATNAME="Telephones"
+  export CATNAME="Téléphones"
   $CATEGORIZE
 fi
 
 if [ $CELLPHONES -ne 0 ];
 then
   export CATFILE="Cellphones.txt"
-  export CATNAME="Cellphones"
+  export CATNAME="Téléphones portables"
   $CATEGORIZE
 fi
 

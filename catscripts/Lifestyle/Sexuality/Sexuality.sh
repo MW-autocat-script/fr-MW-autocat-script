@@ -1,6 +1,6 @@
 #!/bin/bash
 
-KEYWORDS_SEXUALITY="sexuality|sexual orientation|\bgay(|s)\b|lesbian|bi(|-)sexual|trans(-|)gender|pansexual|\bBDSM\b|fellatio|cunnilingus|anal(| )sex|vaginal(| )sex|omnisexual|sado-masochis(m|t)"
+KEYWORDS_SEXUALITY="sexualit(é|er|e)|orientation sexuel(le|)|\bgay(|s)\b|lesbian(ne|)|bi(|-)sexuel(le|)|trans(-|)genre|pansexual|\bBDSM\b|fellatio|cunnilingus|anal(| )sex|vaginal(e|)(| )sex|omnisexual|sado-masochis(m|t)"
 KEYWORDS_MASTURBATION="Masturbat(e|ion)"
 
 egrep -i "$KEYWORDS_SEXUALITY" newpages.txt | egrep -iv "$KEYWORDS_MASTURBATION" >> Sexuality.txt
@@ -12,7 +12,7 @@ MASTURBATION=`stat --print=%s Masturbation.txt`
 if [ $SEXUALITY -ne 0 ];
 then
   export CATFILE="Sexuality.txt"
-  export CATNAME="Sexuality"
+  export CATNAME="Sexualité"
   $CATEGORIZE
 fi
 

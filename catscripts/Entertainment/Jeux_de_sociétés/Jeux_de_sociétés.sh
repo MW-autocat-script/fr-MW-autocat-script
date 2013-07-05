@@ -3,7 +3,7 @@
 
 KEYWORDS_CHECKERS="jeu(| )de(| )dames"
 KEYWORDS_CHESS="(|jeu)(| )d(|')(| )(e|é)checs|(E|É)chiquier"
-KEYWORDS_BOARDGAMES="Jeux(| )de(| )soci(e|é)t(e|é)s"
+KEYWORDS_BOARDGAMES="Jeux(| )de(| )soci(e|é)t(e|é)(s|)"
 
 
 egrep -i "$KEYWORDS_BOARDGAMES" newpages.txt | egrep -iv "$KEYWORDS_CHESS|$KEYWORDS_CHECKERS" >> Boardgames.txt

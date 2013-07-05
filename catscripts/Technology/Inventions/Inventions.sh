@@ -1,10 +1,10 @@
 #!/bin/bash
 
-egrep -i '(^|\[\[)Who invented [abcdefghijklmnopqrstuvwxyz]{1,}($|\]\])' newpages.txt >> Inventions.txt
-egrep -i '(^|\[\[)Who invented the [abcdefghijklmnopqrstuvwxyz]{1,}($|\]\])' newpages.txt >> Inventions.txt
-egrep -i '(^|\[\[)Who is the inventor of [abcdefghijklmnopqrstuvwxyz]{1,}($|\]\])' newpages.txt >> Inventions.txt
-egrep -i '(^|\[\[)When was .+ invented($|\]\])' newpages.txt >> Inventions.txt
-egrep -i '(^|\[\[)Where was .+ invented($|\]\])' newpages.txt >> Inventions.txt
+egrep -i '(^|\[\[)Qui a invent(é|er|e|ée) [abcdefghijklmnopqrstuvwxyz]{1,}($|\]\])' newpages.txt >> Inventions.txt
+egrep -i "(^|\[\[)Qui a invent(é|er|e|ée) le [abcdefghijklmnopqrstuvwxyz]{1,}($|\]\])" newpages.txt >> Inventions.txt
+egrep -i "(^|\[\[)Qui est l'inventeur (de|du) [abcdefghijklmnopqrstuvwxyz]{1,}($|\]\])" newpages.txt >> Inventions.txt
+egrep -i '(^|\[\[)Quand est-ce que .+ invent(é|er|e|ée)($|\]\])' newpages.txt >> Inventions.txt
+egrep -i '(^|\[\[)Où est-ce que .+ invent(é|er|e|ée) ($|\]\])' newpages.txt >> Inventions.txt
 
 INVENTIONS=`stat --print=%s Inventions.txt`
 

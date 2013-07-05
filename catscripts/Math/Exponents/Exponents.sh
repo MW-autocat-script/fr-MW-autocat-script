@@ -1,13 +1,13 @@
 #!/bin/bash
 
-egrep -i 'exponent|[0-9]{1,} to the (-|)[0-9]{1,} power|\^[0-9]{1,}' newpages.txt >> Exponents.txt
+egrep -i 'exposant|[0-9]{1,} à la (-|)[0-9]{1,} puissance (de|)|\^[0-9]{1,}' newpages.txt >> Exponents.txt
 
 EXPONENTS=`stat --print=%s Exponents.txt`
 
 if [ $EXPONENTS -ne 0 ];
 then
   export CATFILE="Exponents.txt"
-  export CATNAME="Exponents"
+  export CATNAME="Exposants"
   $CATEGORIZE
 fi
 

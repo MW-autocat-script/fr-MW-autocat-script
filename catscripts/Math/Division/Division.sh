@@ -1,7 +1,7 @@
 #!/bin/bash
 
-egrep -i '[0-9]{1,} divided by [0-9]{1,}' newpages.txt >> Division.txt
-egrep -i 'What is [0-9]{1,} / [0-9]{1,}' newpages.txt >> Division.txt
+egrep -i '[0-9]{1,} divis(é|e|er) par [0-9]{1,}' newpages.txt >> Division.txt
+egrep -i "C'est quoi' [0-9]{1,} / [0-9]{1,}" newpages.txt >> Division.txt
 egrep -i '[0-9]{1,} ÷ [0-9]{1,}' newpages.txt >> Division.txt
 
 DIVISION=`stat --print=%s Division.txt`

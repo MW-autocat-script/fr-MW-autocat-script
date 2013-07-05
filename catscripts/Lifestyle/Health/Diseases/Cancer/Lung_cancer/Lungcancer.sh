@@ -1,13 +1,13 @@
 #!/bin/bash
 
-egrep -i 'Lung(| )cancer' newpages.txt > Lungcancer.txt
+egrep -i 'Cancer(| )(du|de|)(| )poumon(s|)' newpages.txt > Lungcancer.txt
 
 LUNGCANCER=`stat --print=%s Lungcancer.txt`
 
 if [ $LUNGCANCER -ne 0 ];
 then
   export CATFILE="Lungcancer.txt"
-  export CATNAME="Lung cancer"
+  export CATNAME="Cancer du poumon"
   $CATEGORIZE
 fi
 

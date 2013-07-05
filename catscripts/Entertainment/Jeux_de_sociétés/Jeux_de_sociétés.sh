@@ -1,8 +1,14 @@
 #!/bin/bash
 
-egrep -i 'Jeux(| )de(| )sociétés' newpages.txt | egrep -iv 'checkers|chess' >> Boardgames.txt
-egrep -i '\bChess\b|Chessboard' newpages.txt | egrep -iv 'Leonard Chess|Chess Roberts|Harry Potter|Smallville|Chess River|River Chess' >> Chess.txt
-egrep -i 'Checkers|Checker(| )board' newpages.txt >> Checkers.txt
+
+KEYWORDS_CHECKERS="jeu(| )de(| )dames"
+KEYWORDS_CHESS="jeu(| )d(|')échecs|Échiquier"
+KEYWORDS_BOARDGAMES="Jeux(| )de(| )sociétés"
+
+
+egrep -i "$KEYWORDS_BOARDGAMES" newpages.txt | egrep -iv "$KEYWORDS_CHESS|$KEYWORDS_CHECKERS" >> Boardgames.txt
+egrep -i "$KEYWORDS_CHESS" newpages.txt >> Chess.txt 
+egrep -i "$KEYWORDS_CHECKERS" newpages.txt >> Checkers.txt
 
 BOARDGAMES=`stat --print=%s Boardgames.txt`
 CHESS=`stat --print=%s Chess.txt`
@@ -18,14 +24,14 @@ fi
 if [ $CHESS -ne 0 ];
 then
   export CATFILE="Chess.txt"
-  export CATNAME="Chess"
+  export CATNAME="Jeu d'échecs"
   $CATEGORIZE
 fi
 
 if [ $CHECKERS -ne 0 ];
 then
   export CATFILE="Checkers.txt"
-  export CATNAME="Checkers"
+  export CATNAME="Jeu de dames"
   $CATEGORIZE
 fi
 

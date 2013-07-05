@@ -17,21 +17,21 @@ CHECKERS=`stat --print=%s Checkers.txt`
 if [ $BOARDGAMES -ne 0 ];
 then
   export CATFILE="Boardgames.txt"
-  export CATNAME="Jeux de sociétés"
+  export CATNAME="Jeux de société"
   $CATEGORIZE
 fi
 
 if [ $CHESS -ne 0 ];
 then
   export CATFILE="Chess.txt"
-  export CATNAME="Jeu d'échecs"
+  export CATNAME="Jeux d'échecs"
   $CATEGORIZE
 fi
 
 if [ $CHECKERS -ne 0 ];
 then
   export CATFILE="Checkers.txt"
-  export CATNAME="Jeu de dames"
+  export CATNAME="Jeux de dames"
   $CATEGORIZE
 fi
 

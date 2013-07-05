@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Cancer(| )du(| )sein' newpages.txt > Breastcancer.txt
+egrep -i 'Cancer(| )(du|de|)(| )sein' newpages.txt > Breastcancer.txt
 
 BREASTCANCER=`stat --print=%s Breastcancer.txt`
 

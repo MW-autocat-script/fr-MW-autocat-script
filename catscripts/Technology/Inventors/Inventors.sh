@@ -41,7 +41,7 @@ WHITNEY=`stat --print=%s EliWhitney.txt`
 if [ $INVENTORS -ne 0 ];
 then
   export CATFILE="Inventors.txt"
-  export CATNAME="Inventors"
+  export CATNAME="Inventeurs"
   $CATEGORIZE
 fi
 

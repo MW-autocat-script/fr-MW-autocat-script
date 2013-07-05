@@ -1,9 +1,9 @@
 #!/bin/bash
 
-egrep -i 'etymology' newpages.txt >> Etymology.txt
-egrep -i 'Where (does|did) the (word|phrase|saying) .+ (originate|come from)' newpages.txt >> Etymology.txt
-egrep -i 'origin of the word [a-z]{1,}' newpages.txt >> Etymology.txt
-egrep -i 'Where (does|did) the (sur|)name [a-z]{1,} (originate|come from)' newpages.txt >> NameOrigins.txt
+egrep -i 'étymologie' newpages.txt >> Etymology.txt
+egrep -i 'Où est-ce que (le|la) (mot|phrase) .+ (viens|vient|vien) de' newpages.txt >> Etymology.txt
+egrep -i 'origine du mot [a-z]{1,}' newpages.txt >> Etymology.txt
+egrep -i 'Où est-ce que (le|la) (sur|)nom [a-z]{1,} (viens|vient|vien) de' newpages.txt >> NameOrigins.txt
 
 ETYMOLOGY=`stat --print=%s Etymology.txt`
 ORIGINS=`stat --print=%s NameOrigins.txt`
@@ -11,14 +11,14 @@ ORIGINS=`stat --print=%s NameOrigins.txt`
 if [ $ETYMOLOGY -ne 0 ];
 then
   export CATFILE="Etymology.txt"
-  export CATNAME="Etymology"
+  export CATNAME="Étymologie"
   $CATEGORIZE
 fi
 
 if [ $ORIGINS -ne 0 ];
 then
   export CATFILE="NameOrigins.txt"
-  export CATNAME="Name origins"
+  export CATNAME="Origines de noms"
   $CATEGORIZE
 fi
 

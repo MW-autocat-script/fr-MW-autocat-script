@@ -7,7 +7,7 @@ CPLUSPLUS=`stat --print=%s CPlusPlus.txt`
 if [ $CPLUSPLUS -ne 0 ];
 then
   export CATFILE="CPlusPlus.txt"
-  export CATNAME="C++ programming"
+  export CATNAME="Programmation C++"
   $CATEGORIZE
 fi
 

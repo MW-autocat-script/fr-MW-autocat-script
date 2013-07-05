@@ -51,7 +51,7 @@ EMULATION=`stat --print=%s Emulation.txt`
 if [ $EMULATION -ne 0 ];
 then
   export CATFILE="Emulation.txt"
-  export CATNAME="Emulation and virtualization"
+  export CATNAME="Emulation et virtualisation"
   $CATEGORIZE
 fi
 

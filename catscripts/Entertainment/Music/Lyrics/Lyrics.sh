@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'lyriques' newpages.txt >> Lyrics.txt
+egrep -i 'lyrique(s|)' newpages.txt >> Lyrics.txt
 
 LYRICS=`stat --print=%s Lyrics.txt`
 

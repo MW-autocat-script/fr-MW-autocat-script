@@ -1,7 +1,7 @@
 #!/bin/bash 
 #Pokemon species by name, starting with the letter B
-egrep -i 'Bagon' newpages.txt >> Bagon.txt &
-egrep -i 'Baltoy' newpages.txt >> Baltoy.txt &
+egrep -i 'Bagon|Draby' newpages.txt >> Bagon.txt &
+egrep -i 'Baltoy|Balbuto ' newpages.txt >> Baltoy.txt &
 egrep -i 'Banette' newpages.txt >> Banette.txt &
 egrep -i 'Barboach' newpages.txt >> Barboach.txt &
 egrep -i 'Basculin' newpages.txt >> Basculin.txt &

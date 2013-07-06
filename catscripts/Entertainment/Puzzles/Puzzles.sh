@@ -1,9 +1,9 @@
 #!/bin/bash
 
 egrep -i 'Sudoku' newpages.txt >> Sudoku.txt
-egrep -i 'Crossword' newpages.txt >> Crossword.txt
-egrep -i '[0-9]{1,}( |-)letter word for' newpages.txt >> Crossword.txt
-egrep -i '(three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty)( |-)letter word for' newpages.txt >> Crossword.txt
+egrep -i 'Mots croisés' newpages.txt >> Crossword.txt
+egrep -i 'Mot (de|en) [0-9]{1,}( |-)lettre(s) pour' newpages.txt >> Crossword.txt
+egrep -i 'Mot (de|en) (trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|treize|quatorze|quinze|seize|dix( |-)sept|dix( |-)huit|dix( |-)neuf|vingt)( |-) lettres pour' newpages.txt >> Crossword.txt
 
 SUDOKU=`stat --print=%s Sudoku.txt`
 CROSSWORD=`stat --print=%s Crossword.txt`
@@ -18,7 +18,7 @@ fi
 if [ $CROSSWORD -ne 0 ];
 then
   export CATFILE="Crossword.txt"
-  export CATNAME="Crossword puzzles"
+  export CATNAME="Mots croisés"
   $CATEGORIZE
 fi
 

@@ -37,7 +37,7 @@ python $PYWIKIPEDIADIR/pagegenerators.py -randomredirect:1 -ns:0|sed 's|[0-9][0-
  
 ./catscripts/Entertainment/Entertainment.sh
 #./catscripts/Government/Government.sh
-#./catscripts/Language/Language.sh
+#./catscripts/Langage/Langage.sh
 #./catscripts/Lifestyle/Lifestyle.sh
 #./catscripts/Maintenance/Maintenance.sh
 #./catscripts/Math/Math.sh

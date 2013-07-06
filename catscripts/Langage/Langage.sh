@@ -5,7 +5,7 @@ then
   printf "Starting Language\n" 
 fi
 
-CURRENTDIR="./catscripts/Language"
+CURRENTDIR="./catscripts/Langage"
 
 $CURRENTDIR/Non-English_languages/NonEnglish.sh 
 $CURRENTDIR/Definitions/Definitions.sh

@@ -12,4 +12,3 @@ then
 fi
 
 rm AmericanDad.txt
-TEST

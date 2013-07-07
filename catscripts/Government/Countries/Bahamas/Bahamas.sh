@@ -7,7 +7,7 @@ BAHAMAS=`stat --print=%s Bahamas.txt`
 if [ $BAHAMAS -ne 0 ];
 then
   export CATFILE="Bahamas.txt"
-  export CATNAME="The Bahamas"
+  export CATNAME="Les Bahamas"
   $CATEGORIZE
 fi
 

@@ -1,13 +1,13 @@
 #!/bin/bash
 
-egrep -i 'Benin' newpages.txt >> Benin.txt
+egrep -i 'B(e|é)nin' newpages.txt >> Benin.txt
 
 BENIN=`stat --print=%s Benin.txt`
 
 if [ $BENIN -ne 0 ];
 then
   export CATFILE="Benin.txt"
-  export CATNAME="Benin"
+  export CATNAME="Bénin"
   $CATEGORIZE
 fi
 

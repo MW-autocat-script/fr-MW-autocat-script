@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Brunei' newpages.txt >> Brunei.txt
+egrep -i 'Brun(e|é)i' newpages.txt >> Brunei.txt
 
 BRUNEI=`stat --print=%s Brunei.txt`
 

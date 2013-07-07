@@ -1,13 +1,13 @@
 #!/bin/bash
 
-egrep -i 'Australia' newpages.txt | egrep -iv 'Canberra|Sydney|Melbourne' >> Australia.txt
+egrep -i 'Australie' newpages.txt | egrep -iv 'Canberra|Sydney|Melbourne' >> Australia.txt
 
 AUSTRALIA=`stat --print=%s Australia.txt`
 
 if [ $AUSTRALIA -ne 0 ];
 then
   export CATFILE="Australia.txt"
-  export CATNAME="Australia"
+  export CATNAME="Australie"
   $CATEGORIZE
 fi
 

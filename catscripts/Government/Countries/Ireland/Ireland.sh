@@ -1,13 +1,13 @@
 #!/bin/bash
 
-egrep -i 'Ireland' newpages.txt | egrep -iv 'Northern Ireland' >> Ireland.txt
+egrep -i 'Irlande' newpages.txt | egrep -iv 'Irlande(| )du(| )Nord' >> Ireland.txt
 
 IRELAND=`stat --print=%s Ireland.txt`
 
 if [ $IRELAND -ne 0 ];
 then
   export CATFILE="Ireland.txt"
-  export CATNAME="Republic of Ireland"
+  export CATNAME="République d'Irlande"
   $CATEGORIZE
 fi
 

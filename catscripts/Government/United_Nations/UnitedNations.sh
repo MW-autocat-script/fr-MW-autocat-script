@@ -1,13 +1,13 @@
 #!/bin/bash
 
-egrep -i 'United Nations|^U\.N(|\.)| U\.N(|\.) ' newpages.txt > UnitedNations.txt
+egrep -i 'United Nations|^U\.N(|\.)| U\.N(|\.) |Nation(s|)(-| |)Uni(es|s|e|)' newpages.txt > UnitedNations.txt
 
 UNITED=`stat --print=%s UnitedNations.txt`
 
 if [ $UNITED -ne 0 ];
 then
   export CATFILE="UnitedNations.txt"
-  export CATNAME="United Nations"
+  export CATNAME="Nations Unies"
   $CATEGORIZE
 fi
 

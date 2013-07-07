@@ -1,9 +1,9 @@
 #!/bin/bash
 
-egrep -i 'Italy' newpages.txt | egrep -iv 'Rome|Pompeii|Pisa|Venice' >> Italy.txt 
-egrep -i '\bRome(|s)\b' newpages.txt | egrep -iv 'Ancient Rome|Rome(,|)(| )Georgia' >> Rome.txt
-egrep -i 'Ancient Rome|Romans|Roman times|Augustus Caesar|Emperor Nero|Caligula' newpages.txt | egrep -iv 'Book of Romans|Romans [0-9]{1,}\:[0-9]{1,}|Julius Caesar' >> AncientRome.txt #Exclude biblical book and Julius Caesar
-egrep -i 'Julius Caesar' newpages.txt >> JuliusCaesar.txt
+egrep -i 'Italy|Italie' newpages.txt | egrep -iv 'Rome|Pompeii|Pisa|Venice' >> Italy.txt 
+egrep -i '\bRome(|s)\b' newpages.txt | egrep -iv 'Rome antique|Rome(,|)(| )Georgia' >> Rome.txt
+egrep -i "Romain antique|Romains|époque romaine|Auguste César|l'empereur Néron|Caligula" newpages.txt | egrep -iv 'Livre des Romains|Romains [0-9]{1,}\:[0-9]{1,}|Julius Caesar' >> AncientRome.txt #Exclude biblical book and Julius Caesar
+egrep -i 'Julius Caesar|Jules César' newpages.txt >> JuliusCaesar.txt
 egrep -i 'Pisa' newpages.txt >> Pisa.txt
 egrep -i 'Pompeii' newpages.txt >> Pompeii.txt
 egrep -i 'Venice' newpages.txt >> Venice.txt
@@ -19,7 +19,7 @@ VENICE=`stat --print=%s Venice.txt`
 if [ $ITALY -ne 0 ];
 then
   export CATFILE="Italy.txt"
-  export CATNAME="Italy"
+  export CATNAME="Italie"
   $CATEGORIZE
 fi
 
@@ -33,7 +33,7 @@ fi
 if [ $ANCIENTROME -ne 0 ];
 then
   export CATFILE="AncientRome.txt"
-  export CATNAME="Ancient Rome"
+  export CATNAME="Romain antuque"
   $CATEGORIZE
 fi
 
@@ -54,7 +54,7 @@ fi
 if [ $JCAESAR -ne 0 ];
 then
   export CATFILE="JuliusCaesar.txt"
-  export CATNAME="Julius Caesar"
+  export CATNAME="Jules César"
   $CATEGORIZE
 fi
 

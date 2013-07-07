@@ -1,7 +1,7 @@
 #!/bin/bash
 
-egrep -i 'Greece' newpages.txt | egrep -iv 'ancient Greece' >> Greece.txt
-egrep -i 'ancient Greece' newpages.txt >> Ancient.txt
+egrep -i 'Gr(è|e)ce' newpages.txt | egrep -iv 'Grèce antique' >> Greece.txt
+egrep -i 'Grèce antique' newpages.txt >> Ancient.txt
 
 GREECE=`stat --print=%s Greece.txt`
 ANCIENT=`stat --print=%s Ancient.txt`
@@ -9,14 +9,14 @@ ANCIENT=`stat --print=%s Ancient.txt`
 if [ $GREECE -ne 0 ];
 then
   export CATFILE="Greece.txt"
-  export CATNAME="Greece"
+  export CATNAME="Grèce"
   $CATEGORIZE
 fi
 
 if [ $ANCIENT -ne 0 ];
 then
   export CATFILE="Ancient.txt"
-  export CATNAME="Ancient Greece"
+  export CATNAME="Grèce antique"
   $CATEGORIZE
 fi
 

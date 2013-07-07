@@ -1,11 +1,11 @@
 #!/bin/bash
 
 KEYWORDS_EGYPT="(É|E)gypte"
-KEYWORDS_ANCIENTEGYPYT="l'(É|E)gypte Ancienne|Tutankhamen|Tutencarmoon|tootencarmoon"
+KEYWORDS_ANCIENTEGYPT="l'(É|E)gypte Ancienne|Tutankhamen|Tutencarmoon|tootencarmoon"
 KEYWORDS_NILERIVER="Nile River|River Nile|Nile delta|Aswan dam"
 
 egrep -i "$KEYWORDS_EGYPT" newpages.txt | egrep -iv "$KEYWORDS_ANCIENTEGYPYT|$KEYWORDS_NILERIVER" >> Egypt.txt
-egrep -i "$KEYWORDS_ANCIENTEGYPYT" newpages.txt >> AncientEgypt.txt
+egrep -i "$KEYWORDS_ANCIENTEGYPT" newpages.txt >> AncientEgypt.txt
 egrep -i "$KEYWORDS_NILERIVER" newpages.txt >> NileRiver.txt
 
 EGYPT=`stat --print=%s Egypt.txt`

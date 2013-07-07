@@ -1,21 +1,16 @@
 #!/bin/bash
 
-KEYWORDS_HARP="\bharp(|s)\b"
-KEYWORDS_VIOLA="\bViola(|s)\b|Violist"
-KEYWORDS_XYLOPHONE="Xylophon(e|ist)"
-
-egrep -i 'Cello\b' newpages.txt | egrep -iv 'Monticello|Nontecello' >> Cello.txt
-egrep -i 'Clarinet' newpages.txt >> Clarinet.txt
-egrep -i 'Drum|\bBongo' newpages.txt | egrep -iv 'ear(| )drums|brake|chicken|turkey' >> Drums.txt
+egrep -i 'Violoncelle\b' newpages.txt | egrep -iv 'Monticello|Nontecello' >> Cello.txt
+egrep -i 'Clarinette' newpages.txt >> Clarinet.txt
+egrep -i 'Tambour|\bBongo' newpages.txt | egrep -iv 'ear(| )drums|brake|chicken|turkey' >> Drums.txt
 egrep -i '\bFlute(s|)' newpages.txt | egrep -iv 'azure flute|Pok(e|é)(| )flute|Pokémon|Pokemon|azelf flute' >> Flute.txt
-egrep -i 'Guitar' newpages.txt | egrep -iv 'hero' >> Guitar.txt
-egrep -i "$KEYWORDS_HARP" newpages.txt | egrep -iv "harp seal">> Harp.txt
+egrep -i 'Guitar|Guitare' newpages.txt | egrep -iv 'hero' >> Guitar.txt
+egrep -i "\bharpe(s)\b" newpages.txt | egrep -iv "harp seal">> Harp.txt
 egrep -i 'Piano' newpages.txt >> Piano.txt
-egrep -i 'on a recorder|on the recorder\]\]|for recorder\]\]|notes.+recorder|recorder.+notes' newpages.txt >> Recorder.txt
 egrep -i 'Saxophone' newpages.txt >> Saxophone.txt
-egrep -i 'Violin' newpages.txt >> Violin.txt
-egrep -i "$KEYWORDS_VIOLA" newpages.txt >> Viola.txt
-egrep -i "$KEYWORDS_XYLOPHONE" newpages.txt >> Xylophone.txt
+egrep -i 'Violon' newpages.txt >> Violin.txt
+egrep -i "alto(s)" newpages.txt >> Viola.txt
+egrep -i "xylophon(e|iste)" newpages.txt >> Xylophone.txt
 
 CELLO=`stat --print=%s Cello.txt`
 CLARINET=`stat --print=%s Clarinet.txt`
@@ -33,21 +28,21 @@ XYLOPHONE=`stat --print=%s Xylophone.txt`
 if [ $CELLO -ne 0 ];
 then
   export CATFILE="Cello.txt"
-  export CATNAME="Cello"
+  export CATNAME="Violoncelle"
   $CATEGORIZE
 fi
 
 if [ $CLARINET -ne 0 ];
 then
   export CATFILE="Clarinet.txt"
-  export CATNAME="Clarinet"
+  export CATNAME="Clarinette"
   $CATEGORIZE
 fi
 
 if [ $DRUMS -ne 0 ];
 then
   export CATFILE="Drums.txt"
-  export CATNAME="Drums"
+  export CATNAME="Tambour"
   $CATEGORIZE
 fi
 
@@ -61,14 +56,14 @@ fi
 if [ $GUITAR -ne 0 ];
 then
   export CATFILE="Guitar.txt"
-  export CATNAME="Guitar"
+  export CATNAME="Guitare"
   $CATEGORIZE
 fi
 
 if [ $HARP -ne 0 ];
 then
   export CATFILE="Harp.txt"
-  export CATNAME="Harp"
+  export CATNAME="Harpe"
   $CATEGORIZE
 fi
 
@@ -96,14 +91,14 @@ fi
 if [ $VIOLIN -ne 0 ];
 then
   export CATFILE="Violin.txt"
-  export CATNAME="Violin"
+  export CATNAME="Violon"
   $CATEGORIZE
 fi
 
 if [ $VIOLA -ne 0 ];
 then
   export CATFILE="Viola.txt"
-  export CATNAME="Viola"
+  export CATNAME="Alto"
   $CATEGORIZE
 fi
 

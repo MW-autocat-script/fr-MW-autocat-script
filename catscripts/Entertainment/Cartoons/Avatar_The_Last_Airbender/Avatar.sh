@@ -10,7 +10,7 @@ AVATAR=`stat --print=%s TheLastAirbender.txt`
 if [ $AVATAR -ne 0 ];
 then
   export CATFILE="TheLastAirbender.txt"
-  export CATNAME="Avatar: The Last Airbender"
+  export CATNAME="Avatar, le dernier maître de l'air"
   $CATEGORIZE
 fi
 

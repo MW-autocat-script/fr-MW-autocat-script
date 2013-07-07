@@ -10,7 +10,7 @@ SONIC=`stat --print=%s Sonic.txt`
 if [ $SONIC -ne 0 ];
 then
   export CATFILE="Sonic.txt"
-  export CATNAME="Sonic the Hedgehog franchise"
+  export CATNAME="Sonic the Hedgehog"
   $CATEGORIZE
 fi
 

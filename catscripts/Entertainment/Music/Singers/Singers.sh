@@ -26,6 +26,7 @@ egrep -i '\bSinger' newpages.txt \
 | egrep -iv 'Ashley Tisdale' \
 | egrep -iv 'Lil(| )Wayne' \
 | egrep -iv 'Eminem|Slim Shady|Marshall(| Bruce) Mathers|EMINƎM' \
+| egrep -iv 'Colonel Reyel' \
 >> Singers.txt
 
 egrep -i '\bAkon' newpages.txt >> Akon.txt
@@ -52,6 +53,7 @@ egrep -i 'Tupac|2pac|Shakur' newpages.txt >> TupacShakur.txt
 egrep -i 'Ashley Tisdale' newpages.txt >> AshleyTisdale.txt
 egrep -i 'Lil(| )Wayne' newpages.txt >> LilWayne.txt
 egrep -i 'Eminem|Slim Shady|Marshall(| Bruce) Mathers|EMINƎM' newpages.txt >> Eminem.txt
+egrep -i 'Colonel Reyel' newpages.txt >> Reyel.txt
 
 SINGERS=`stat --print=%s Singers.txt`
 AKON=`stat --print=%s Akon.txt`
@@ -78,11 +80,12 @@ TUPAC=`stat --print=%s TupacShakur.txt`
 TISDALE=`stat --print=%s AshleyTisdale.txt`
 LILWAYNE=`stat --print=%s LilWayne.txt`
 EMINEM=`stat --print=%s Eminem.txt`
+REYEL=`stat --print=%s Reyel.txt`
 
 if [ $SINGERS -ne 0 ];
 then
   export CATFILE="Singers.txt"
-  export CATNAME="Singers"
+  export CATNAME="Chanteurs et chanteuses"
   $CATEGORIZE
 fi
 
@@ -254,6 +257,13 @@ then
   $CATEGORIZE
 fi
 
+if [ $REYEL -ne 0 ];
+then
+  export CATFILE="Reyel.txt"
+  export CATNAME="Colonel Reyel"
+  $CATEGORIZE
+fi
+
 rm Singers.txt
 rm Akon.txt
 rm JustinBieber.txt
@@ -279,3 +289,4 @@ rm TupacShakur.txt
 rm AshleyTisdale.txt
 rm LilWayne.txt
 rm Eminem.txt
+rm Reyel.txt

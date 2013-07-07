@@ -8,7 +8,7 @@ MLP=`stat --print=%s MLPFIM.txt`
 if [ $MLP -ne 0 ];
 then
   export CATFILE="MLPFIM.txt"
-  export CATNAME="My Little Pony: Friendship is Magic"
+  export CATNAME="My Little Pony : Les amies, c'est magique"
   $CATEGORIZE
 fi
 

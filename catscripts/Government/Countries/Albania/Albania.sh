@@ -6,14 +6,14 @@ then
   printf "Starting Albania\n" 
 fi
 
-egrep -i 'Albania' newpages.txt >> Albania.txt
+egrep -i 'Albanie' newpages.txt >> Albania.txt
 
 ALBANIA=`stat --print=%s Albania.txt`
 
 if [ $ALBANIA -ne 0 ];
 then
   export CATFILE="Albania.txt"
-  export CATNAME="Albania"
+  export CATNAME="Albanie"
   $CATEGORIZE
 fi
 

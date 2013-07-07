@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i "Harry(| )Potter|Hermione|Ron(| )Weasley|Dumbledore|Snape|Voldemort|Hagrid|Remus(| )Lupin|Sirius(| )Black|Peter(| )Pettigrew|Hogwarts|Quidditch|Philosopher(|'s)(| )Stone|deathly(| )hallows|goblet(| )of(| )fire|chamber(| )of(| )secrets|Azkaban|Order(| )of(| )the(| )Phoenix|Half(|-)(| )blood(| )prince|\bMuggle|Pensieve|Horcrux|Elder Wand" newpages.txt >> HarryPotter.txt
+egrep -i "Harry(| )Potter|Hermione|Ron(| )Weasley|Dumbledore|Rogue|Voldemort|Hagrid|Remus(| )Lupin|Sirius(| )Black|Peter(| )Pettigrew|Poudlard|Quidditch|Pierre philosophale|reliques(| )mort|coupe(| )de(| )feu|chambre(| )des(| )secrets|Azkaban|Ordre(| )du(| )Phénix|Prince(| )de(| )sang(|-)(| )mêlé|\bMoldu|Sang(|-)de(|-)Bourbe|Pensine|Horcruxe|Baguette de Sureau" newpages.txt >> HarryPotter.txt
 
 HARRYPOTTER=`stat --print=%s HarryPotter.txt`
 

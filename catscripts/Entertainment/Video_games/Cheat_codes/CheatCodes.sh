@@ -14,7 +14,7 @@ ACTIONREPLAY=`stat --print=%s ActionReplay.txt`
 if [ $CHEATCODES -ne 0 ];
 then
   export CATFILE="CheatCodes.txt"
-  export CATNAME="Cheat codes"
+  export CATNAME="Codes de triche"
   $CATEGORIZE
 fi
 

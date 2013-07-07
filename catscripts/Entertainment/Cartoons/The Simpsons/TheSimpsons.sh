@@ -8,7 +8,7 @@ SIMPSONS=`stat --print=%s TheSimpsons.txt`
 if [ $SIMPSONS -ne 0 ];
 then
   export CATFILE="TheSimpsons.txt"
-  export CATNAME="The Simpsons"
+  export CATNAME="Les Simpson"
   $CATEGORIZE
 fi
 

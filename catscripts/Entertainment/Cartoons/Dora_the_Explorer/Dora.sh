@@ -7,7 +7,7 @@ DORA=`stat --print=%s Dora.txt`
 if [ $DORA -ne 0 ];
 then
   export CATFILE="Dora.txt"
-  export CATNAME="Dora the Explorer"
+  export CATNAME="Dora l'exploratrice"
   $CATEGORIZE
 fi
 

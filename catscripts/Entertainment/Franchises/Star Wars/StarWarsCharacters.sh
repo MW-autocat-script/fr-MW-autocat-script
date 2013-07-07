@@ -5,23 +5,23 @@ egrep -i 'C-3PO|C3PO' newpages.txt >> C-3PO.txt
 egrep -i 'Chewbacca' newpages.txt >> Chewbacca.txt
 egrep -i 'Boba Fett|Bobafett' newpages.txt >> BobaFett.txt
 egrep -i 'Jango Fett|Jangofett' newpages.txt >> JangoFett.txt
-egrep -i 'Jabba the Hutt|\bJabba\b' newpages.txt >> JabbaTheHutt.txt
+egrep -i 'Jabba le Hutt|\bJabba\b' newpages.txt >> JabbaTheHutt.txt
 egrep -i 'Obi-Wan|Obiwan|Kenobi' newpages.txt >> Obi-WanKenobi.txt
 egrep -i 'Galen(| )Marek|Starkiller' newpages.txt >> Starkiller.txt
-egrep -i 'Darth Maul' newpages.txt >> DarthMaul.txt
-egrep -i 'Palpatine|Darth Sidious' newpages.txt >> Sidious.txt
+egrep -i 'Dark Maul' newpages.txt >> DarthMaul.txt
+egrep -i 'Palpatine|Dark Sidious' newpages.txt >> Sidious.txt
 egrep -i 'Plo Koon' newpages.txt >> PloKoon.txt
 egrep -i 'R2-D2|R2D2' newpages.txt >> R2-D2.txt
 egrep -i 'Dooku' newpages.txt >> Dooku.txt
 egrep -i 'Kit(| )Fisto' newpages.txt >> KitFisto.txt
 egrep -i '\bRevan' newpages.txt >> Revan.txt
-egrep -i 'Anakin Skywalker|Anakinskywalker|Darth Vader|\bVader\b' newpages.txt >> DarthVader.txt
+egrep -i 'Anakin Skywalker|Anakinskywalker|Darth Vader|\bVader\b|Dark Vador' newpages.txt >> DarthVader.txt
 egrep -i 'Luke Skywalker|Lukeskywalker' newpages.txt >> LukeSkywalker.txt
 egrep -i 'Mara Jade|Marajade|Mara Skywalker' newpages.txt >> MaraJadeSkywalker.txt
 egrep -i 'Anakin Solo|Anakinsolo' newpages.txt >> AnakinSolo.txt
 egrep -i 'Han Solo|Hansolo' newpages.txt >> HanSolo.txt
 egrep -i 'Jacen Solo|Jacensolo|\bCaedus\b|Darthcaedus' newpages.txt >> DarthCaedus.txt
-egrep -i 'Leia Organa|Leiaorgana|Leia Solo|Leiasolo|Princess Leia|Princessleia' newpages.txt >> LeiaOrganaSolo.txt
+egrep -i 'Leia Organa|Leiaorgana|Leia Solo|Leiasolo|Princesse Leia|Princesseleia' newpages.txt >> LeiaOrganaSolo.txt
 egrep -i 'Ahsoka Tano|Ahsokatano|Asoka Tano|Asokatano|Ashoka Tano|Ashokatano' newpages.txt >> AhsokaTano.txt
 egrep -i '\bWindu\b|Mace Windu' newpages.txt >> MaceWindu.txt
 egrep -i '\bYoda\b' newpages.txt >> Yoda.txt
@@ -99,7 +99,7 @@ fi
 if [ $JABBA -ne 0 ];
 then
   export CATFILE="JabbaTheHutt.txt"
-  export CATNAME="Jabba the Hutt"
+  export CATNAME="Jabba le Hutt"
   $CATEGORIZE
 fi
 
@@ -120,7 +120,7 @@ fi
 if [ $MAUL -ne 0 ];
 then
   export CATFILE="DarthMaul.txt"
-  export CATNAME="Darth Maul"
+  export CATNAME="Dark Maul"
   $CATEGORIZE
 fi
 
@@ -133,14 +133,14 @@ fi
 if [ $SIDIOUS -ne 0 ];
 then
   export CATFILE="Sidious.txt"
-  export CATNAME="Darth Sidious"
+  export CATNAME="Dark Sidious"
   $CATEGORIZE
 fi
 
 if [ $DOOKU -ne 0 ];
 then
   export CATFILE="Dooku.txt"
-  export CATNAME="Count Dooku"
+  export CATNAME="Comte Dooku"
   $CATEGORIZE
 fi
 
@@ -161,7 +161,7 @@ fi
 if [ $VADER -ne 0 ];
 then
   export CATFILE="DarthVader.txt"
-  export CATNAME="Anakin Skywalker / Darth Vader"
+  export CATNAME="Anakin Skywalker / Dark Vador"
   $CATEGORIZE
 fi
 
@@ -196,7 +196,7 @@ fi
 if [ $JACEN -ne 0 ];
 then
   export CATFILE="DarthCaedus.txt"
-  export CATNAME="Jacen Solo / Darth Caedus"
+  export CATNAME="Jacen Solo / Dark Caedus"
   $CATEGORIZE
 fi
 

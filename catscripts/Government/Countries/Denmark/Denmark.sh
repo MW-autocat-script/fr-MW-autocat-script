@@ -1,7 +1,7 @@
 #!/bin/bash
 
-egrep -i 'Denmark' newpages.txt | egrep -iv 'Greenland' >> Denmark.txt
-egrep -i 'Greenland' newpages.txt >> Greenland.txt
+egrep -i 'Danemark' newpages.txt | egrep -iv 'Greenland' >> Denmark.txt
+egrep -i 'Groenland' newpages.txt >> Greenland.txt
 
 DENMARK=`stat --print=%s Denmark.txt`
 GREENLAND=`stat --print=%s Greenland.txt`
@@ -9,14 +9,14 @@ GREENLAND=`stat --print=%s Greenland.txt`
 if [ $DENMARK -ne 0 ];
 then
   export CATFILE="Denmark.txt"
-  export CATNAME="Denmark"
+  export CATNAME="Danemark"
   $CATEGORIZE
 fi
 
 if [ $GREENLAND -ne 0 ];
 then
   export CATFILE="Greenland.txt"
-  export CATNAME="Greenland"
+  export CATNAME="Groenland"
   $CATEGORIZE
 fi
 

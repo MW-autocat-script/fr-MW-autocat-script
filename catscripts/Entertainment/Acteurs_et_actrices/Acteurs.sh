@@ -5,7 +5,7 @@ then
   printf "Starting Actors and actresses\n" 
 fi
 
-export CURRENTDIR="./catscripts/Entertainment/Acteurs_et_actresses"
+export CURRENTDIR="./catscripts/Entertainment/Acteurs_et_actrices"
 
 . $CURRENTDIR/Orlando_Bloom/OrlandoBloom.sh #$KEYWORDS_ACTOR_ORLANDOBLOOM
 . $CURRENTDIR/Sandra_Bullock/SandraBullock.sh #$KEYWORDS_ACTRESS_SANDRABULLOCK

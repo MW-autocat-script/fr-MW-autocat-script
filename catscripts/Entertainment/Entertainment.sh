@@ -7,7 +7,7 @@ fi
 
 CURRENTDIR="./catscripts/Entertainment"
 
-$CURRENTDIR/Acteurs_et_actresses/Acteurs.sh # Actors and actresses
+$CURRENTDIR/Acteurs_et_actrices/Acteurs.sh # Actors and actresses
 $CURRENTDIR/Jeux_de_sociétés/Jeux_de_sociétés.sh #Board games
 $CURRENTDIR/Video_games/VideoGames.sh
 $CURRENTDIR/Franchises/Franchises.sh

@@ -19,7 +19,7 @@ FLUTE=`stat --print=%s Flute.txt`
 GUITAR=`stat --print=%s Guitar.txt`
 HARP=`stat --print=%s Harp.txt`
 PIANO=`stat --print=%s Piano.txt`
-RECORDER=`stat --print=%s Recorder.txt`
+#RECORDER=`stat --print=%s Recorder.txt`
 SAXOPHONE=`stat --print=%s Saxophone.txt`
 VIOLIN=`stat --print=%s Violin.txt`
 VIOLA=`stat --print=%s Viola.txt`
@@ -71,13 +71,6 @@ if [ $PIANO -ne 0 ];
 then
   export CATFILE="Piano.txt"
   export CATNAME="Piano"
-  $CATEGORIZE
-fi
-
-if [ $RECORDER -ne 0 ];
-then
-  export CATFILE="Recorder.txt"
-  export CATNAME="Recorder (musical instrument)"
   $CATEGORIZE
 fi
 

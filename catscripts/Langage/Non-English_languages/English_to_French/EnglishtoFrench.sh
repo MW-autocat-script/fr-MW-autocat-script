@@ -1,13 +1,13 @@
 #!/bin/bash
 
-egrep -i '.+in French\]\]|French word for' newpages.txt >> EnglishtoFrench.txt
+egrep -i '.+en anglais\]\]|Mot(|s) anglais' newpages.txt >> EnglishtoFrench.txt
 
 ETOF=`stat --print=%s EnglishtoFrench.txt`
 
 if [ $ETOF -ne 0 ];
 then
   export CATFILE="EnglishtoFrench.txt"
-  export CATNAME="English to French"
+  export CATNAME="Français à anglais"
   $CATEGORIZE
 fi
 

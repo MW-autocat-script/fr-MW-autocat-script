@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i '\bSinger' newpages.txt \
+egrep -i '\bchanteur|\bchanteuse' newpages.txt \
 | egrep -iv 'sewing machine' \
 | egrep -iv '\bAkon' \
 | egrep -iv 'Justin Bieber|Justin Beiber' \

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-KEYWORDS_SOUTHAFRICA="South(| )Africa|apartheid"
+KEYWORDS_SOUTHAFRICA="South(| )Africa|apartheid|Afrique( |)(du|) Sud"
 KEYWORDS_NELSONMANDELA="Mandela"
 
 egrep -i "$KEYWORDS_SOUTHAFRICA" newpages.txt | egrep -iv "$KEYWORDS_NELSONMANDELA" >> SouthAfrica.txt
@@ -12,7 +12,7 @@ MANDELA=`stat --print=%s NelsonMandela.txt`
 if [ $SOUTHAFRICA -ne 0 ];
 then
   export CATFILE="SouthAfrica.txt"
-  export CATNAME="South Africa"
+  export CATNAME="Afrique du Sud"
   $CATEGORIZE
 fi
 

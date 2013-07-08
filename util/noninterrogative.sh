@@ -2,13 +2,14 @@
 
 python $PYWIKIPEDIADIR/pagegenerators.py -category:"Page titles lacking an interrogative word" |sed s'|[0-9][0-9][0-9][0-9][0-9][0-9]: ||' |sed s'|[0-9][0-9][0-9][0-9][0-9]: ||' |sed s'|[0-9][0-9][0-9][0-9]: ||'  | sed s'| [0-9][0-9][0-9]: ||' | sed s'|  [0-9][0-9]: ||' | sed s'|   [0-9]: ||' > nonint.txt
 
-egrep -i '\bqui\b' nonint.txt >> Qui.txt
-egrep -i '\bquoi\b' nonint.txt >> Quoi.txt
-egrep -i '\boù\b' nonint.txt >> Où.txt
-egrep -i '\bquand\b' nonint.txt >> Quand.txt
-egrep -i '\bpourquoi\b' nonint.txt >> Pourquoi.txt
-egrep -i '\bcomment\b' nonint.txt >> Comment.txt
-egrep -i '\best-ce\b' nonint.txt >> Est-ce.txt
+egrep -i "\bqui\b" nonint.txt >> Qui.txt
+egrep -i "\bquoi\b" nonint.txt >> Quoi.txt
+egrep -i "\boù\b" nonint.txt >> Où.txt
+egrep -i "\bquand\b" nonint.txt >> Quand.txt
+egrep -i "\bpourquoi\b" nonint.txt >> Pourquoi.txt
+egrep -i "\bcomment\b" nonint.txt >> Comment.txt
+egrep -i "\best-ce\b" nonint.txt >> Est-ce.txt
+egrep -i "\bétait\b" nonint.txt >> Était.txt
 
 
 QUI=`stat --print=%s Qui.txt`
@@ -18,6 +19,7 @@ QUAND=`stat --print=%s Quand.txt`
 POURQUOI=`stat --print=%s Pourquoi.txt`
 COMMENT=`stat --print=%s Comment.txt`
 ESTCE=`stat --print=%s Est-ce.txt`
+ETAIT=`stat --print=%s Était.txt`
 
 if [ $QUI -ne 0 ];
 then
@@ -53,7 +55,12 @@ if [ $ESTCE -ne 0 ];
 then
   python $PYWIKIPEDIADIR/replace.py -file:Est-ce.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
 fi
-  
+
+if [ $ETAIT -ne 0 ];
+then
+  python $PYWIKIPEDIADIR/replace.py -file:Était.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+fi
+
 rm Qui.txt
 rm Quoi.txt
 rm Où.txt
@@ -61,3 +68,5 @@ rm Quand.txt
 rm Pourquoi.txt
 rm Comment.txt
 rm Est-ce.txt
+rm Était.txt
+

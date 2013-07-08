@@ -2,14 +2,13 @@
 
 python $PYWIKIPEDIADIR/pagegenerators.py -category:"Page titles lacking an interrogative word" |sed s'|[0-9][0-9][0-9][0-9][0-9][0-9]: ||' |sed s'|[0-9][0-9][0-9][0-9][0-9]: ||' |sed s'|[0-9][0-9][0-9][0-9]: ||'  | sed s'| [0-9][0-9][0-9]: ||' | sed s'|  [0-9][0-9]: ||' | sed s'|   [0-9]: ||' > nonint.txt
 
-egrep -i '^Who\b' nonint.txt >> Who.txt
-egrep -i '\bwho\b' nonint.txt | egrep -iv 'Doctor Who' >> Who.txt
-egrep -i '\bWhat|^What' nonint.txt >> What.txt
-egrep -i '\bWhere\b' nonint.txt >> Where.txt
-egrep -i '\bWhen\b' nonint.txt >> When.txt
-egrep -i '^Whens\b' nonint.txt >> When.txt
-egrep -i '\bwhy\b' nonint.txt >> Why.txt
-egrep -i '\bHow\b' nonint.txt >> How.txt
+egrep -i '\bqui\b' nonint.txt >> Qui.txt
+egrep -i '\bquoi\b' nonint.txt >> Quoi.txt
+egrep -i '\boù\b' nonint.txt >> Où.txt
+egrep -i '\bquand\b' nonint.txt >> Quand.txt
+egrep -i '\bpourquoi\b' nonint.txt >> Pourquoi.txt
+egrep -i '\bcomment\b' nonint.txt >> Comment.txt
+egrep -i '\best-ce\b' nonint.txt >> Est-ce.txt
 egrep -i '^Do\b' nonint.txt >> Do.txt
 egrep -i '((\.|,) |^)Does\b' nonint.txt >> Does.txt
 egrep -i "((\.|,) |^)Doesn't\b" nonint.txt >> Doesnt.txt
@@ -36,9 +35,9 @@ egrep -i '((\.|,) |^)Has\b' nonint.txt >> Has.txt
 egrep -i "((\.|,) |^)Hasn't\b|^Hasnt\b" nonint.txt >> Hasnt.txt
 egrep -i '\bAm I\b' nonint.txt >> AmI.txt
 
-WHO=`stat --print=%s Who.txt`
-WHAT=`stat --print=%s What.txt`
-WHERE=`stat --print=%s Where.txt`
+QUI=`stat --print=%s Qui.txt`
+QUOI=`stat --print=%s Quoi.txt`
+OU=`stat --print=%s Où.txt` 
 WHEN=`stat --print=%s When.txt`
 WHY=`stat --print=%s Why.txt`
 HOW=`stat --print=%s How.txt`
@@ -68,9 +67,9 @@ HAS=`stat --print=%s Has.txt`
 HASNT=`stat --print=%s Hasnt.txt`
 AMI=`stat --print=%s AmI.txt`
 
-if [ $WHO -ne 0 ];
+if [ $QUI -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Who.txt -regex '\[\[[cC]ategory:Page titles lacking an interrogative word\]\]' '' -pt:1 -summary:"Bot - removing questions that have had an interrogative word added (matches Who)" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Qui.txt -regex '\[\[[cC]ategory:Page titles lacking an interrogative word\]\]' '' -pt:1 -summary:"Insert French message here" -always
 fi
 
 if [ $WHAT -ne 0 ];

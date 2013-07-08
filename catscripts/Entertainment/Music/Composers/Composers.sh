@@ -2,7 +2,7 @@
 #Categorization script for composers of music
 
 egrep -i '\bBach\b' newpages.txt >> Bach.txt
-egrep -i 'Amadeus|Mozart' newpages.txt | egrep -iv 'Rock Me|Puck' >> WolfgangAmadeusMozart.txt 
+egrep -i 'Amadeus|Mozart' newpages.txt | egrep -iv 'Rock Me' >> WolfgangAmadeusMozart.txt 
 egrep -i 'Beethoven'  newpages.txt | egrep -iv 'Bernard|breed|dog' >> LudwigVanBeethoven.txt
 egrep -i 'Aaron Copland' newpages.txt >> AaronCopland.txt
 egrep -i 'Igor Stravinsky' newpages.txt >> IgorStravinsky.txt

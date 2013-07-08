@@ -12,6 +12,7 @@ egrep -i "\best-ce\b" nonint.txt >> Est-ce.txt
 egrep -i "\bétait\b" nonint.txt >> Était.txt
 egrep -i "\bquel\b" nonint.txt >> Quel.txt
 egrep -i "\bpeut-t\b" nonint.txt >> Peut-t.txt
+egrep -i "\bCombien\b" nont.txt >> Combien.txt
 
 
 QUI=`stat --print=%s Qui.txt`
@@ -24,6 +25,7 @@ ESTCE=`stat --print=%s Est-ce.txt`
 ETAIT=`stat --print=%s Était.txt`
 QUEL=`stat --print=%s Quel.txt`
 PEUTT=`stat --print=%s Peut-t.txt`
+COMBIEN=`stat --print=%s Combien.txt`
 
 if [ $QUI -ne 0 ];
 then
@@ -75,6 +77,11 @@ then
   python $PYWIKIPEDIADIR/replace.py -file:Peut-t.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
 fi
 
+if [ $COMBIEN -ne 0 ];
+then
+  python $PYWIKIPEDIADIR/replace.py -file:Combien.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+fi
+
 rm Qui.txt
 rm Quoi.txt
 rm Où.txt
@@ -85,3 +92,4 @@ rm Est-ce.txt
 rm Était.txt
 rm Quel.txt
 rm Peut-t.txt
+rm Combien.txt

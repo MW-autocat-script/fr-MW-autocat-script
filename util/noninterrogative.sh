@@ -69,7 +69,7 @@ AMI=`stat --print=%s AmI.txt`
 
 if [ $QUI -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Qui.txt -regex '\[\[[cC]ategory:Page titles lacking an interrogative word\]\]' '' -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Qui.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
 fi
 
 if [ $WHAT -ne 0 ];

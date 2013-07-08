@@ -15,6 +15,7 @@ QUI=`stat --print=%s Qui.txt`
 QUOI=`stat --print=%s Quoi.txt`
 OU=`stat --print=%s Où.txt` 
 QUAND=`stat --print=%s Quand.txt`
+POURQUOI=`stat --print=%s Pourquoi.txt`
 
 if [ $QUI -ne 0 ];
 then
@@ -36,8 +37,14 @@ then
    python $PYWIKIPEDIADIR/replace.py -file:Quand.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
 fi
 
+if [ $POURQUOI -ne 0 ];
+then
+  python $PYWIKIPEDIADIR/replace.py -file:Pourquoi.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+fi
+
 
 rm Qui.txt
 rm Quoi.txt
 rm Où.txt
 rm Quand.txt
+rm Pourquoi.txt

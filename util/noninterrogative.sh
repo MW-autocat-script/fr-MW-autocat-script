@@ -12,7 +12,13 @@ egrep -i "\best-ce\b" nonint.txt >> Est-ce.txt
 egrep -i "\bétait\b" nonint.txt >> Était.txt
 egrep -i "\bquel\b" nonint.txt >> Quel.txt
 egrep -i "\bpeut-t\b" nonint.txt >> Peut-t.txt
-egrep -i "\bCombien\b" nont.txt >> Combien.txt
+egrep -i "\bCombien\b" nonint.txt >> Combien.txt
+egrep -i "\bDurant\b" nonint.txt >> Durant.txt
+egrep -i "Dans un\b" nonint.txt >> Dansun.txt
+egrep -i "Dans qu" nonint.txt >> Dansqu.txt
+egrep -i "Qui est" nonint.txt >> Quiest.txt
+egrep -i "est-t" nonint.txt >> Estt.txt
+egrep -i "est il" nonint.txt >> Estil.txt
 
 
 QUI=`stat --print=%s Qui.txt`
@@ -26,6 +32,14 @@ ETAIT=`stat --print=%s Était.txt`
 QUEL=`stat --print=%s Quel.txt`
 PEUTT=`stat --print=%s Peut-t.txt`
 COMBIEN=`stat --print=%s Combien.txt`
+DURANT=`stat --print=%s Durant.txt`
+DANSUN=`stat --print=%s Dansun.txt`
+DANSQU=`stat --print=%s Dansqu.txt`
+QUIEST=`stat --print=%s Quiest.txt`
+ESTT=`stat --print=%s Estt.txt`
+ESTIL=`stat --print=%s Estil.txt`
+
+
 
 if [ $QUI -ne 0 ];
 then
@@ -82,6 +96,37 @@ then
   python $PYWIKIPEDIADIR/replace.py -file:Combien.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
 fi
 
+if [ $DURANT -ne 0 ];
+then
+  python $PYWIKIPEDIADIR/replace.py -file:Durant.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+fi
+
+if [ $DANSUN -ne 0 ];
+then
+  python $PYWIKIPEDIADIR/replace.py -file:Dansun.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+fi
+
+
+if [ $DANSQU -ne 0 ];
+then
+  python $PYWIKIPEDIADIR/replace.py -file:Dansqu.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+fi
+
+if [ $QUIEST -ne 0 ];
+then
+  python $PYWIKIPEDIADIR/replace.py -file:Quiest.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+fi
+
+if [ $ESTT -ne 0 ];
+then
+  python $PYWIKIPEDIADIR/replace.py -file:Estt.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+fi
+
+if [ $ESTIL -ne 0 ];
+then
+  python $PYWIKIPEDIADIR/replace.py -file:Estil.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+fi
+
 rm Qui.txt
 rm Quoi.txt
 rm Où.txt
@@ -93,3 +138,9 @@ rm Était.txt
 rm Quel.txt
 rm Peut-t.txt
 rm Combien.txt
+rm Durant.txt
+rm Dansun.txt
+rm Dansqu.txt
+rm Quiest.txt
+rm Estt.txt
+rm Estil.txt

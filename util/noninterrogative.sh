@@ -49,102 +49,102 @@ QUANT=`stat --print=%s Quant.txt`
 
 if [ $QUI -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Qui.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Qui.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Qui)" -always
 fi
 
 if [ $QUOI -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Quoi.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Quoi.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Quoi)" -always
 fi
 
 if [ $OU -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Où.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Où.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Où)" -always
 fi
 
 if [ $QUAND -ne 0 ];
 then
-   python $PYWIKIPEDIADIR/replace.py -file:Quand.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+   python $PYWIKIPEDIADIR/replace.py -file:Quand.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Quand)" -always
 fi
 
 if [ $POURQUOI -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Pourquoi.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Pourquoi.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Pourquoi)" -always
 fi
 
 if [ $COMMENT -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Comment.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Comment.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Comment)" -always
 fi
 
 if [ $ESTCE -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Est-ce.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Est-ce.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Est-ce)" -always
 fi
 
 if [ $ETAIT -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Était.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Était.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Était)" -always
 fi
 
 if [ $QUEL -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Quel.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Quel.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Quel)" -always
 fi
 
 if [ $PEUTT -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Peut-t.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Peut-t.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Peut-t)" -always
 fi
 
 if [ $COMBIEN -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Combien.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Combien.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Combien)" -always
 fi
 
 if [ $DURANT -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Durant.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Durant.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Durant)" -always
 fi
 
 if [ $DANSUN -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Dansun.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Dansun.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Dans un)" -always
 fi
 
 if [ $DANSQU -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Dansqu.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Dansqu.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Dans qu)" -always
 fi
 
 if [ $QUIEST -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Quiest.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Quiest.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Qui est)" -always
 fi
 
 if [ $ESTT -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Estt.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Estt.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Est-t)" -always
 fi
 
 if [ $ESTIL -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Estil.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Estil.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Est il)" -always
 fi
 
 if [ $QUE -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Que.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Que.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Que)" -always
 fi
 
 if [ $QU -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Qu.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Qu.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Qu)" -always
 fi
 
 if [ $QUANT -ne 0 ];
 then
-  python $PYWIKIPEDIADIR/replace.py -file:Quant.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+  python $PYWIKIPEDIADIR/replace.py -file:Quant.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Robot: Enlèvement de questions qui ont eu un mot interrogatif ajouté (correspond à Quant)" -always
 fi
 
 rm Qui.txt

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-KEYWORDS_POLAND="Poland"
+KEYWORDS_POLAND="Pologne"
 KEYWORDS_WARSAW="Warsaw"
 KEYWORDS_AUSCHWITZ="Auschwitz|Oświęcim"
 
@@ -15,7 +15,7 @@ AUSCHWITZ=`stat --print=%s Auschwitz.txt`
 if [ $POLAND -ne 0 ];
 then
   export CATFILE="Poland.txt"
-  export CATNAME="Poland"
+  export CATNAME="Pologne"
   $CATEGORIZE
 fi
 

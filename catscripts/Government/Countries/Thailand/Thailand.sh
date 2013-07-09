@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Thailand' newpages.txt | egrep -iv 'Bangkok' >> Thailand.txt
+egrep -i 'Thaïlande' newpages.txt | egrep -iv 'Bangkok' >> Thailand.txt
 egrep -i 'Bankok' newpages.txt | egrep -iv 'Mafia Wars|Bankok Dangerous' >> Bangkok.txt
 
 THAILAND=`stat --print=%s Thailand.txt`
@@ -9,7 +9,7 @@ BANGKOK=`stat --print=%s Bangkok.txt`
 if [ $THAILAND -ne 0 ];
 then
   export CATFILE="Thailand.txt"
-  export CATNAME="Thailand"
+  export CATNAME="Thaïlande"
   $CATEGORIZE
 fi
 

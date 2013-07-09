@@ -11,7 +11,7 @@ egrep -i "\bcomment\b" nonint.txt >> Comment.txt
 egrep -i "\best-ce\b" nonint.txt >> Est-ce.txt
 egrep -i "\bétait" nonint.txt >> Était.txt
 egrep -i "\bquel\b" nonint.txt >> Quel.txt
-egrep -i "\bpeut-t\b" nonint.txt >> Peut-t.txt
+egrep -i "\bpeut-t" nonint.txt >> Peut-t.txt
 egrep -i "\bCombien\b" nonint.txt >> Combien.txt
 egrep -i "\bDurant\b" nonint.txt >> Durant.txt
 egrep -i "Dans un\b" nonint.txt >> Dansun.txt
@@ -19,9 +19,9 @@ egrep -i "Dans qu" nonint.txt >> Dansqu.txt
 egrep -i "Qui est" nonint.txt >> Quiest.txt
 egrep -i "est-t" nonint.txt >> Estt.txt
 egrep -i "est il" nonint.txt >> Estil.txt
-egrep -i "que" nonint.txt >> Que.txt
+egrep -i "que\b" nonint.txt >> Que.txt
 egrep -i "qu'" nonint.txt >> Qu.txt
-egrep -i "quant" nonint.txt >> Quant.txt
+egrep -i "\bQuant\b" nonint.txt >> Quant.txt
 
 
 QUI=`stat --print=%s Qui.txt`

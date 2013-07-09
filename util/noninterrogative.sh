@@ -9,7 +9,7 @@ egrep -i "\bquand\b" nonint.txt >> Quand.txt
 egrep -i "\bpourquoi\b" nonint.txt >> Pourquoi.txt
 egrep -i "\bcomment\b" nonint.txt >> Comment.txt
 egrep -i "\best-ce\b" nonint.txt >> Est-ce.txt
-egrep -i "\bétait\b" nonint.txt >> Était.txt
+egrep -i "\bétait" nonint.txt >> Était.txt
 egrep -i "\bquel\b" nonint.txt >> Quel.txt
 egrep -i "\bpeut-t\b" nonint.txt >> Peut-t.txt
 egrep -i "\bCombien\b" nonint.txt >> Combien.txt

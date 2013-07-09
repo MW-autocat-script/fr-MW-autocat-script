@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Japan\b' newpages.txt | egrep -iv 'Tokyo|Hiroshima|Kyoto|Nagasaki' >> Japan.txt
+egrep -i 'Japon\b' newpages.txt | egrep -iv 'Tokyo|Hiroshima|Kyoto|Nagasaki' >> Japan.txt
 egrep -i 'Tokyo|Kyoto' newpages.txt >> Tokyo.txt
 egrep -i 'Hiroshima' newpages.txt >> Hiroshima.txt
 egrep -i 'Nagasaki' newpages.txt >> Nagasaki.txt
@@ -13,7 +13,7 @@ NAGASAKI=`stat --print=%s Nagasaki.txt`
 if [ $JAPAN -ne 0 ];
 then
   export CATFILE="Japan.txt"
-  export CATNAME="Japan"
+  export CATNAME="Japon"
   $CATEGORIZE
 fi
 

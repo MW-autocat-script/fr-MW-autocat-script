@@ -1,13 +1,13 @@
 #!/bin/bash
 
-egrep -i 'Tunisia' newpages.txt >> Tunisia.txt
+egrep -i 'Tunisie' newpages.txt >> Tunisia.txt
 
 TUNISIA=`stat --print=%s Tunisia.txt`
 
 if [ $TUNISIA -ne 0 ];
 then
   export CATFILE="Tunisia.txt"
-  export CATNAME="Tunisia"
+  export CATNAME="Tunisie"
   $CATEGORIZE
 fi
 

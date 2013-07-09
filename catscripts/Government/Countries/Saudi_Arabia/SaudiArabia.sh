@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Saudi(| )Arabia' newpages.txt | egrep -iv 'Mecca|Riyadh|Medina' >> SaudiArabia.txt
+egrep -i 'Arabie Saoudite' newpages.txt | egrep -iv 'Mecca|Riyadh|Medina' >> SaudiArabia.txt
 egrep -i 'Mecca' newpages.txt >> Mecca.txt
 egrep -i 'Medina' newpages.txt >> Medina.txt
 egrep -i 'Riyadh' newpages.txt >> Riyadh.txt
@@ -13,7 +13,7 @@ RIYADH=`stat --print=%s Riyadh.txt`
 if [ $SAUDIARABIA -ne 0 ];
 then
   export CATFILE="SaudiArabia.txt"
-  export CATNAME="Saudi Arabia"
+  export CATNAME="Arabie Saoudite"
   $CATEGORIZE
 fi
 

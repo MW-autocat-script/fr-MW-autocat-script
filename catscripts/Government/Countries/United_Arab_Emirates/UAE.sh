@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i '\bUAE|\bU\.A\.E|United(| )Arab(| )Emirates' newpages.txt | egrep -iv 'Dubai' >> UAE.txt
+egrep -i '\bUAE|\bU\.A\.E|Émirats arabes unis' newpages.txt | egrep -iv 'Dubai' >> UAE.txt
 egrep -i 'Dubai' newpages.txt >> Dubai.txt
 
 UAE=`stat --print=%s UAE.txt`
@@ -9,7 +9,7 @@ DUBAI=`stat --print=%s Dubai.txt`
 if [ $UAE -ne 0 ];
 then
   export CATFILE="UAE.txt"
-  export CATNAME="United Arab Emirates"
+  export CATNAME="Émirats arabes unis"
   $CATEGORIZE
 fi
 

@@ -19,6 +19,9 @@ egrep -i "Dans qu" nonint.txt >> Dansqu.txt
 egrep -i "Qui est" nonint.txt >> Quiest.txt
 egrep -i "est-t" nonint.txt >> Estt.txt
 egrep -i "est il" nonint.txt >> Estil.txt
+egrep -i "que" nonint.txt >> Que.txt
+egrep -i "qu'" nonint.txt >> Qu.txt
+egrep -i "quant" nonint.txt >> Quant.txt
 
 
 QUI=`stat --print=%s Qui.txt`
@@ -38,6 +41,9 @@ DANSQU=`stat --print=%s Dansqu.txt`
 QUIEST=`stat --print=%s Quiest.txt`
 ESTT=`stat --print=%s Estt.txt`
 ESTIL=`stat --print=%s Estil.txt`
+QUE=`stat --print=%s Que.txt`
+QU=`stat --print=%s Qu.txt`
+QUANT=`stat --print=%s Quant.txt`
 
 
 
@@ -106,7 +112,6 @@ then
   python $PYWIKIPEDIADIR/replace.py -file:Dansun.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
 fi
 
-
 if [ $DANSQU -ne 0 ];
 then
   python $PYWIKIPEDIADIR/replace.py -file:Dansqu.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
@@ -127,6 +132,21 @@ then
   python $PYWIKIPEDIADIR/replace.py -file:Estil.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
 fi
 
+if [ $QUE -ne 0 ];
+then
+  python $PYWIKIPEDIADIR/replace.py -file:Que.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+fi
+
+if [ $QU -ne 0 ];
+then
+  python $PYWIKIPEDIADIR/replace.py -file:Qu.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+fi
+
+if [ $QUANT -ne 0 ];
+then
+  python $PYWIKIPEDIADIR/replace.py -file:Quant.txt -regex "\[\[[cC]atégorie:Titres de pages qui n'ont pas un mot interrogatif\]\]" "" -pt:1 -summary:"Insert French message here" -always
+fi
+
 rm Qui.txt
 rm Quoi.txt
 rm Où.txt
@@ -144,3 +164,6 @@ rm Dansqu.txt
 rm Quiest.txt
 rm Estt.txt
 rm Estil.txt
+rm Que.txt
+rm Qu.txt
+rm Quant.txt

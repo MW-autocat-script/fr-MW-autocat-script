@@ -1,6 +1,6 @@
 #!/bin/bash
 
-KEYWORDS_GERMANY="Germany"
+KEYWORDS_GERMANY="Allemagne|Allemande"
 KEYWORDS_NAZIGERMANY="Nazi"
 KEYWORDS_HITLER="Hitler"
 KEYWORDS_NAZIGERMANY_SECONDARY="Hitler(| )youth"
@@ -24,14 +24,14 @@ BERLIN=`stat --print=%s Berlin.txt`
 if [ $GERMANY -ne 0 ];
 then
   export CATFILE="Germany.txt"
-  export CATNAME="Germany"
+  export CATNAME="Allemagne"
   $CATEGORIZE
 fi
 
 if [ $NAZI -ne 0 ];
 then
   export CATFILE="NaziGermany.txt"
-  export CATNAME="Nazi Germany"
+  export CATNAME="Nazi de l'allemagne"
   $CATEGORIZE
 fi
 

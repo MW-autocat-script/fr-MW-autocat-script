@@ -8,7 +8,7 @@ NEWZEALAND=`stat --print=%s NewZealand.txt`
 if [ $NEWZEALAND -ne 0 ];
 then
   export CATFILE="NewZealand.txt"
-  export CATNAME="Nouvelle Zélande"
+  export CATNAME="Nouvelle-Zélande"
   $CATEGORIZE
 fi
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Libye|Ghadafi' newpages.txt >> Libya.txt
+egrep -i 'Libye|Ghadafi|Kadhafi' newpages.txt >> Libya.txt
 
 LIBYA=`stat --print=%s Libya.txt`
 

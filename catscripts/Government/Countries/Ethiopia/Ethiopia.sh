@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Éthiopie|Ghadafi|Abyssinia' newpages.txt >> Ethiopia.txt
+egrep -i 'Éthiopie|Abyssinie' newpages.txt >> Ethiopia.txt
 
 ETHIOPIA=`stat --print=%s Ethiopia.txt`
 

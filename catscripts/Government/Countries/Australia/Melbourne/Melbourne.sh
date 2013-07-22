@@ -7,7 +7,7 @@ MELBOURNE=`stat --print=%s Melbourne.txt`
 if [ $MELBOURNE -ne 0 ];
 then
   export CATFILE="Melbourne.txt"
-  export CATNAME="Melbourne, Australia"
+  export CATNAME="Melbourne, Australie"
   $CATEGORIZE
 fi
 

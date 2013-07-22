@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Sri(| )Lanka|Ceylon' newpages.txt >> SriLanka.txt
+egrep -i 'Sri(| )Lanka|Ceyl(o|a)n' newpages.txt >> SriLanka.txt
 
 SRILANKA=`stat --print=%s SriLanka.txt`
 

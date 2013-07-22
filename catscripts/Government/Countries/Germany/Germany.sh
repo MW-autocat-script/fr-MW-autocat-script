@@ -1,9 +1,9 @@
 #!/bin/bash
 
-KEYWORDS_GERMANY="Allemagne|Allemande"
+KEYWORDS_GERMANY="Allemagne|Angela Merkel"
 KEYWORDS_NAZIGERMANY="Nazi"
 KEYWORDS_HITLER="Hitler"
-KEYWORDS_NAZIGERMANY_SECONDARY="Hitler(| )youth"
+KEYWORDS_NAZIGERMANY_SECONDARY="Jeunesse (hitlérienne|Hitler)"
 KEYWORDS_HITLER_EXCLUDE="$KEYWORDS_NAZIGERMANY_SECONDARY"
 KEYWORDS_BERLIN="Berlin"
 KEYWORDS_AUSCHWITZ="Auschwitz|Oświęcim"
@@ -31,7 +31,7 @@ fi
 if [ $NAZI -ne 0 ];
 then
   export CATFILE="NaziGermany.txt"
-  export CATNAME="Nazi de l'allemagne"
+  export CATNAME="Nazi (Allemagne)"
   $CATEGORIZE
 fi
 

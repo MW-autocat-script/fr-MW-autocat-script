@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Liban' newpages.txt | egrep -iv 'New Jersey|\bNJ\b|bologna|baloney' >> Lebanon.txt
+egrep -i 'Liban' newpages.txt | egrep -iv 'New Jersey|\bNJ\b|bologne|baloney' >> Lebanon.txt
 
 LEBANON=`stat --print=%s Lebanon.txt`
 

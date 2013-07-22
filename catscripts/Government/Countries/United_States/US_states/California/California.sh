@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'California' newpages.txt | egrep -iv 'Los(| )Angeles|Sacramento|San(| )Diego|San(| )Francisco' >> California.txt
+egrep -i 'Californi(a|e)' newpages.txt | egrep -iv 'Los(| )Angeles|Sacramento|San(| )Diego|San(| )Francisco' >> California.txt
 egrep -i 'Los(| )Angeles' newpages.txt >> LosAngeles.txt
 egrep -i 'Sacramento' newpages.txt >> Sacramento.txt
 egrep -i 'San(| )Diego' newpages.txt >> SanDiego.txt
@@ -15,7 +15,7 @@ SANFRANCISCO=`stat --print=%s SanFrancisco.txt`
 if [ $CALIFORNIA -ne 0 ];
 then
   export CATFILE="California.txt"
-  export CATNAME="California"
+  export CATNAME="Californie"
   $CATEGORIZE
 fi
 

@@ -3,7 +3,7 @@
 KEYWORDS_HAWAII="Hawaii(|s)\b|Hawai'i|\bOahu|Hawaï"
 KEYWORDS_HONOLULU="Honolulu"
 KEYWORDS_PEARLHARBOR="Pearl(| )Harbo(|u)r"
-KEYWORDS_HAWAII_EXCLUDE="$KEYWORDS_HONOLULU|$KEYWORDS_PEARLHARBOR"
+KEYWORDS_HAWAII_EXCLUDE="$KEYWORDS_HONOLULU|$KEYWORDS_PEARLHARBOR|Hawaii (5|Five)(-| )0|Hawaï Police d'État"
 
 egrep -i "$KEYWORDS_HAWAII" newpages.txt | egrep -iv "$KEYWORDS_HAWAII_EXCLUDE" >> Hawaii.txt
 egrep -i "$KEYWORDS_HONOLULU" newpages.txt >> Honolulu.txt

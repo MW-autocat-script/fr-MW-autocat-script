@@ -1,7 +1,7 @@
 #!/bin/bash
 
-egrep -i 'Danemark' newpages.txt | egrep -iv 'Greenland' >> Denmark.txt
-egrep -i 'Groenland' newpages.txt >> Greenland.txt
+egrep -i 'Danemark' newpages.txt | egrep -iv 'Gro(e|ë)nland' >> Denmark.txt
+egrep -i 'Gro(e|ë)nland' newpages.txt >> Greenland.txt
 
 DENMARK=`stat --print=%s Denmark.txt`
 GREENLAND=`stat --print=%s Greenland.txt`

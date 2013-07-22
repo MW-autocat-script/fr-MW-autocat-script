@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'pays (non|pas) reconn' newpages.txt | egrep -iv 'Taiwan|Taipei' >> Unrecognized.txt
+egrep -i 'pays (non|pas) reconnu' newpages.txt | egrep -iv 'Taiwan|Taipei' >> Unrecognized.txt
 egrep -i 'Sealand' newpages.txt >> Unrecognized.txt
 egrep -i 'Seborga' newpages.txt >> Unrecognized.txt
 egrep -i 'micronation' newpages.txt >> Unrecognized.txt

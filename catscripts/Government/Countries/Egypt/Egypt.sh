@@ -1,8 +1,8 @@
 #!/bin/bash
 
 KEYWORDS_EGYPT="(É|E)gypte"
-KEYWORDS_ANCIENTEGYPT="l'(É|E)gypte Ancienne|Tutankhamen|Tutencarmoon|tootencarmoon"
-KEYWORDS_NILERIVER="Nile River|River Nile|Nile delta|Aswan dam"
+KEYWORDS_ANCIENTEGYPT="(É|E)gypte antique|Tutankhamen|Tout(a|â)nkhamon"
+KEYWORDS_NILERIVER="Nile River|River Nile|Nile delta|Aswan dam|Nil\b|Delta du Nil"
 
 egrep -i "$KEYWORDS_EGYPT" newpages.txt | egrep -iv "$KEYWORDS_ANCIENTEGYPYT|$KEYWORDS_NILERIVER" >> Egypt.txt
 egrep -i "$KEYWORDS_ANCIENTEGYPT" newpages.txt >> AncientEgypt.txt
@@ -15,21 +15,21 @@ NILE=`stat --print=%s NileRiver.txt`
 if [ $EGYPT -ne 0 ];
 then
   export CATFILE="Egypt.txt"
-  export CATNAME="Egypte"
+  export CATNAME="Égypte"
   $CATEGORIZE
 fi
 
 if [ $ANCIENT -ne 0 ];
 then
   export CATFILE="AncientEgypt.txt"
-  export CATNAME="Égypte Ancienne"
+  export CATNAME="Égypte antique"
   $CATEGORIZE
 fi
 
 if [ $NILE -ne 0 ];
 then
   export CATFILE="NileRiver.txt"
-  export CATNAME="Nile River"
+  export CATNAME="Nil (fleuve)"
   $CATEGORIZE
 fi
 

@@ -1,9 +1,9 @@
 #!/bin/bash
 
-KEYWORDS_HAWAII="Hawaii(|s)\b|Hawai'i|\bOahu|Hawaï"
+KEYWORDS_HAWAII="Hawa(ï|ii)(|s)\b|Hawai'i|\bOahu"
 KEYWORDS_HONOLULU="Honolulu"
 KEYWORDS_PEARLHARBOR="Pearl(| )Harbo(|u)r"
-KEYWORDS_HAWAII_EXCLUDE="$KEYWORDS_HONOLULU|$KEYWORDS_PEARLHARBOR|Hawaii (5|Five)(-| )0|Hawaï Police d'État"
+KEYWORDS_HAWAII_EXCLUDE="$KEYWORDS_HONOLULU|$KEYWORDS_PEARLHARBOR|Hawa(ï|ii) (5|Five)(-| )0|Hawa(ï|ii) Police d'État"
 
 egrep -i "$KEYWORDS_HAWAII" newpages.txt | egrep -iv "$KEYWORDS_HAWAII_EXCLUDE" >> Hawaii.txt
 egrep -i "$KEYWORDS_HONOLULU" newpages.txt >> Honolulu.txt

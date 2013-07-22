@@ -1,7 +1,7 @@
 #!/bin/bash
 
-egrep -i 'Taiwan|Chinese Taipei' newpages.txt >> Taiwan.txt
-egrep -i 'Republic of China' newpages.txt | egrep -iv "People('|)s Republic of China" >> Taiwan.txt
+egrep -i 'Ta(i|ï)wan|Taipei' newpages.txt >> Taiwan.txt
+egrep -i 'République de Chine' newpages.txt | egrep -iv "République populaire de Chine" >> Taiwan.txt
 
 TAIWAN=`stat --print=%s Taiwan.txt`
 

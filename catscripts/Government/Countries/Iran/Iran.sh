@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i '\bIran|Tehran' newpages.txt >> Iran.txt
+egrep -i '\bIran|T(e|é)h(|e|é)ran' newpages.txt >> Iran.txt
 
 IRAN=`stat --print=%s Iran.txt`
 

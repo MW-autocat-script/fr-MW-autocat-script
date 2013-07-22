@@ -1,7 +1,7 @@
 #!/bin/bash
 
 egrep -i 'Isra(e|ë)l' newpages.txt | egrep -iv 'Jeru(-|)salem|Tel(| )Aviv|Israelite' >> Israel.txt
-egrep -i 'Jeru(-|)salem' newpages.txt | egrep -iv 'Jerusalem artichoke' >> Jerusalem.txt #Jerusalem artichoke is a tuber from a biannual sunflower, and has nothing to do with the city or Israel
+egrep -i 'J(e|é)ru(-|)salem' newpages.txt | egrep -iv 'Jerusalem artichoke' >> Jerusalem.txt #Jerusalem artichoke is a tuber from a biannual sunflower, and has nothing to do with the city or Israel
 egrep -i 'Tel(| )Aviv' newpages.txt >> TelAviv.txt
 
 ISRAEL=`stat --print=%s Israel.txt`
@@ -18,7 +18,7 @@ fi
 if [ $JERUSALEM -ne 0 ];
 then
   export CATFILE="Jerusalem.txt"
-  export CATNAME="Jerusalem"
+  export CATNAME="Jérusalem"
   $CATEGORIZE
 fi
 

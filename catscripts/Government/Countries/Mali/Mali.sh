@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Mali\b' newpages.txt >> Mali.txt
+egrep -i 'Mali\b|Dioncounda Traoré' newpages.txt >> Mali.txt
 
 MALI=`stat --print=%s Mali.txt`
 

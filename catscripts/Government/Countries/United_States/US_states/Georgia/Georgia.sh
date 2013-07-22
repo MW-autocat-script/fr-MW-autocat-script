@@ -2,8 +2,8 @@
 
 KEYWORDS_ATLANTA="Atlanta"
 KEYWORDS_ATLANTA_EXCLUDE="Atlanta(| )Braves"
-KEYWORDS_GEORGIA="Georgia|, GA\b"
-KEYWORDS_GEORGIA_EXCLUDE="Republic(| )of(| )Georgia|$KEYWORDS_ATLANTA"
+KEYWORDS_GEORGIA="G(e|é)orgi(a|e)|, GA\b"
+KEYWORDS_GEORGIA_EXCLUDE="République(| )def(| )Géorgie|$KEYWORDS_ATLANTA"
 
 egrep -i "$KEYWORDS_GEORGIA" newpages.txt | egrep -iv "$KEYWORDS_GEORGIA_EXCLUDE" >> Georgia.txt
 egrep -i "$KEYWORDS_ATLANTA" newpages.txt | egrep -iv "$KEYWORDS_ATLANTA_EXCLUDE" >> Atlanta.txt
@@ -14,7 +14,7 @@ ATLANTA=`stat --print=%s Atlanta.txt`
 if [ $GEORGIA -ne 0 ];
 then
   export CATFILE="Georgia.txt"
-  export CATNAME="Georgia"
+  export CATNAME="Géorgie, États-Unis"
   $CATEGORIZE
 fi
 

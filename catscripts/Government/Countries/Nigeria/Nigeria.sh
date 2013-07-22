@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Nigeria' newpages.txt >> Nigeria.txt
+egrep -i 'Nig(e|é)ria' newpages.txt >> Nigeria.txt
 
 NIGERIA=`stat --print=%s Nigeria.txt`
 

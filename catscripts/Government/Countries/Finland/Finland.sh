@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Finland' newpages.txt >> Finland.txt
+egrep -i 'Finlande' newpages.txt >> Finland.txt
 
 FINLAND=`stat --print=%s Finland.txt`
 

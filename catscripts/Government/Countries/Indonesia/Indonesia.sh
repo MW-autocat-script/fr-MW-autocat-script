@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Indon(e|é)sie\b|Sulawesi' newpages.txt >> Indonesia.txt
+egrep -i 'Indon(e|é)sie\b|Sulawesi|Célèbes' newpages.txt >> Indonesia.txt
 
 INDONESIA=`stat --print=%s Indonesia.txt`
 

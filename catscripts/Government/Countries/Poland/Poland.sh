@@ -1,7 +1,7 @@
 #!/bin/bash
 
 KEYWORDS_POLAND="Pologne"
-KEYWORDS_WARSAW="Warsaw"
+KEYWORDS_WARSAW="Varsovie"
 KEYWORDS_AUSCHWITZ="Auschwitz|Oświęcim"
 
 egrep -i "$KEYWORDS_POLAND" newpages.txt | egrep -iv "$KEYWORDS_AUSCHWITZ|$KEYWORDS_WARSAW" >> Poland.txt
@@ -22,7 +22,7 @@ fi
 if [ $WARSAW -ne 0 ];
 then
   export CATFILE="Warsaw.txt"
-  export CATNAME="Warsaw"
+  export CATNAME="Varsovie"
   $CATEGORIZE
 fi
 

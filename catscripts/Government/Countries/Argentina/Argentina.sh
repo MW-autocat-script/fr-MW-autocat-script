@@ -5,7 +5,7 @@ ARGENTINA=`stat --print=%s Argentina.txt`
 
 if [ $ARGENTINA -ne 0 ];
 then
-  export CATFILE="Aregntina.txt"
+  export CATFILE="Argentina.txt"
   export CATNAME="Argentine"
   $CATEGORIZE
 fi

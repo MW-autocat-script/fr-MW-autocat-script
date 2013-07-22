@@ -1,6 +1,6 @@
 #!/bin/bash
 
-KEYWORDS_HAWAII="Hawaii(|s)\b|Hawai'i|\bOahu"
+KEYWORDS_HAWAII="Hawaii(|s)\b|Hawai'i|\bOahu|Hawaï"
 KEYWORDS_HONOLULU="Honolulu"
 KEYWORDS_PEARLHARBOR="Pearl(| )Harbo(|u)r"
 KEYWORDS_HAWAII_EXCLUDE="$KEYWORDS_HONOLULU|$KEYWORDS_PEARLHARBOR"

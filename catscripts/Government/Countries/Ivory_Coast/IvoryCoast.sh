@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i "Côte(-| |)d'Ivoire" newpages.txt >> IvoryCoast.txt
+egrep -i "Côte(-| |)d'Ivoire|Alassane Ouattara|Abidjan" newpages.txt >> IvoryCoast.txt
 
 IVORYCOAST=`stat --print=%s IvoryCoast.txt`
 

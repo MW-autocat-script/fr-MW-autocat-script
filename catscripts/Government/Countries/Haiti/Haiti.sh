@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Ha(i|ï)ti' newpages.txt >> Haiti.txt
+egrep -i 'Ha(i|ï)ti|Port(-| )au(-| )Prince' newpages.txt >> Haiti.txt
 
 HAITI=`stat --print=%s Haiti.txt`
 

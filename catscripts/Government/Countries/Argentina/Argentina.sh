@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Aregntine' newpages.txt >> Argentina.txt
+egrep -i 'Argentine' newpages.txt >> Argentina.txt
 ARGENTINA=`stat --print=%s Argentina.txt`
 
 if [ $ARGENTINA -ne 0 ];

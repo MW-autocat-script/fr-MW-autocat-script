@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Belgique|Belge' newpages.txt >> Belgium.txt
+egrep -i 'Belgique' newpages.txt >> Belgium.txt
 
 BELGIUM=`stat --print=%s Belgium.txt`
 

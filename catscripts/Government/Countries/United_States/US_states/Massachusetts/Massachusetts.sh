@@ -1,7 +1,7 @@
 #!/bin/bash
 
 egrep -i 'Massachusetts' newpages.txt | egrep -iv 'Boston' >> Massachusetts.txt
-egrep -i 'Boston' newpages.txt | egrep -iv 'Boston (creame|creme) pie|Boston Marathon' >> Boston.txt
+egrep -i 'Boston' newpages.txt | egrep -iv 'Boston (creame|creme) pie|Boston Marathon|Marathon (|de )Boston' >> Boston.txt
 egrep -i 'Boston Marathon' newpages.txt >> Boston.txt
 
 MASSACHUSETTS=`stat --print=%s Massachusetts.txt`

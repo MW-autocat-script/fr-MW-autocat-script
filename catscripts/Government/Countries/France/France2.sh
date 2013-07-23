@@ -6,8 +6,8 @@ fi
 
 CURRENTDIR="./catscripts/Government/Countries/France"
 
-$CURRENTDIR/US_military/France.sh
-$CURRENTDIR/US_Presidents/Presidents.sh
+$CURRENTDIR/France.sh
+$CURRENTDIR/Presidents.sh
 
 if [ "$DEBUG" == "yes" ];
 then

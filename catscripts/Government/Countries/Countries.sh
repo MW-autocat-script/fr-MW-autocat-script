@@ -42,7 +42,7 @@ $CURRENTDIR/England/England.sh
 $CURRENTDIR/Ethiopia/Ethiopia.sh
 $CURRENTDIR/Fiji/Fiji.sh
 $CURRENTDIR/Finland/Finland.sh
-$CURRENTDIR/France/France.sh
+$CURRENTDIR/France/France2.sh
 $CURRENTDIR/Germany/Germany.sh
 $CURRENTDIR/Ghana/Ghana.sh
 $CURRENTDIR/Greece/Greece.sh

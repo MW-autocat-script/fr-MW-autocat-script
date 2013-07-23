@@ -1,10 +1,8 @@
 #!/bin/bash
 
-egrep -i 'Canada' newpages.txt | egrep -iv 'ginger(| )ale|Toronto|Canada Dry' >> Canada.txt
-egrep -i 'Toronto' newpages.txt >> Toronto.txt
+egrep -i 'Canada|Toronto|Qu(é|e)bec' newpages.txt | egrep -iv 'ginger(| )ale|Canada Dry' >> Canada.txt
 
 CANADA=`stat --print=%s Canada.txt`
-TORONTO=`stat --print=%s Toronto.txt`
 
 if [ $CANADA -ne 0 ];
 then
@@ -13,12 +11,4 @@ then
   $CATEGORIZE
 fi
 
-if [ $TORONTO -ne 0 ];
-then
-  export CATFILE="Toronto.txt"
-  export CATNAME="Toronto"
-  $CATEGORIZE
-fi
-
 rm Canada.txt
-rm Toronto.txt

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'porn|hentai|lolicon|futanari|sex.+vid(e|é)os|vid(e|é)os.+sex' newpages.txt >> Pornography.txt
+egrep -i 'porn|hentai|lolicon|futanari|sex(-e).+vid(e|é)os|vid(e|é)os.+sex(|e)|nu(|e)\b|\bseins\b' newpages.txt >> Pornography.txt
 
 PORN=`stat --print=%s Pornography.txt`
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat newpages.txt | egrep -iv "\bqui\b|\bquoi\b|\boù\b|\bquand\b|\bpourquoi\b|\bcomment\b|\best-ce\b|\bétait|\bquel\b|\bpeut-t|\bCombien\b|\bDurant\b|Dans un\b|Dans qu|Qui est|est-t|est il|que\b|qu'|\bQuant\b" >> noninterrogative.txt
+cat newpages.txt | egrep -iv "\bqui\b|\bquoi\b|\boù\b|\bquand\b|\bpourquoi\b|\bcomment\b|\bOù\b|\best-ce\b|\bétait|\bquel|\bpeut-t|\bCombien\b|\bDurant\b|Dans un\b|Dans qu|Qui est|est-t|est il|que\b|qu'|\bQuant\b" >> noninterrogative.txt
 
 NONINT=`stat --print=%s noninterrogative.txt`
 

@@ -10,7 +10,7 @@ egrep -i "\bpourquoi\b" nonint.txt >> Pourquoi.txt
 egrep -i "\bcomment\b" nonint.txt >> Comment.txt
 egrep -i "\best-ce\b" nonint.txt >> Est-ce.txt
 egrep -i "\bétait" nonint.txt >> Était.txt
-egrep -i "\bquel\b" nonint.txt >> Quel.txt
+egrep -i "\bquel" nonint.txt >> Quel.txt
 egrep -i "\bpeut-t" nonint.txt >> Peut-t.txt
 egrep -i "\bCombien\b" nonint.txt >> Combien.txt
 egrep -i "\bDurant\b" nonint.txt >> Durant.txt

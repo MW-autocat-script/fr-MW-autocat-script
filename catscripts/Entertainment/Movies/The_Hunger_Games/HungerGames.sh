@@ -7,7 +7,7 @@ HUNGER=`stat --print=%s TheHungerGames.txt`
 if [ $HUNGER -ne 0 ];
 then
   export CATFILE="TheHungerGames.txt"
-  export CATNAME="Hunger Games"
+  export CATNAME="The Hunger Games"
   $CATEGORIZE
 fi
 

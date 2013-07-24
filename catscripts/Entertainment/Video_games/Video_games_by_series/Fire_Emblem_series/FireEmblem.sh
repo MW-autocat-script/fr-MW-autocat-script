@@ -7,7 +7,7 @@ EMBLEM=`stat --print=%s FireEmblem.txt`
 if [ $EMBLEM -ne 0 ];
 then
   export CATFILE="FireEmblem.txt"
-  export CATNAME="Fire Emblem series"
+  export CATNAME="Séries Fire Emblem"
   $CATEGORIZE
 fi
 

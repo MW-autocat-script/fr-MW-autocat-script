@@ -3,7 +3,7 @@
 egrep -i 'The Sims 2|Sims 2|Sims2' newpages.txt >> TheSims2.txt
 egrep -i 'The Sims 3|Sims 3|Sims3' newpages.txt >> TheSims3.txt
 egrep -i 'MySims|The Sims Wii' newpages.txt >> MySims.txt
-egrep -i 'The Sims' newpages.txt | egrep -iv 'Sims 2|Sims2|Sims 3|Sims3|Sims Wii|Simswii' >> TheSimsSeries.txt
+egrep -i '(Les|The) Sims' newpages.txt | egrep -iv 'Sims 2|Sims2|Sims 3|Sims3|Sims Wii|Simswii' >> TheSimsSeries.txt
 
 SIMS2=`stat --print=%s TheSims2.txt`
 SIMS3=`stat --print=%s TheSims3.txt`
@@ -13,14 +13,14 @@ SERIES=`stat --print=%s TheSimsSeries.txt`
 if [ $SIMS2 -ne 0 ];
 then
   export CATFILE="TheSims2.txt"
-  export CATNAME="The Sims 2"
+  export CATNAME="Les Sims 2"
   $CATEGORIZE
 fi
 
 if [ $SIMS3 -ne 0 ];
 then
   export CATFILE="TheSims3.txt"
-  export CATNAME="The Sims 3"
+  export CATNAME="Les Sims 3"
   $CATEGORIZE
 fi
 
@@ -34,7 +34,7 @@ fi
 if [ $SERIES -ne 0 ];
 then
   export CATFILE="TheSimsSeries.txt"
-  export CATNAME="The Sims series"
+  export CATNAME="Séries Les Sims"
   $CATEGORIZE
 fi
 

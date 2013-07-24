@@ -7,7 +7,7 @@ DOOM=`stat --print=%s Doom.txt`
 if [ $DOOM -ne 0 ];
 then
   export CATFILE="Doom.txt"
-  export CATNAME="Doom series"
+  export CATNAME="Séries Doom"
   $CATEGORIZE
 fi
 

@@ -21,42 +21,42 @@ CRASH=`stat --print=%s BurnoutCrash.txt`
 if [ $BURNOUT -ne 0 ];
 then
   export CATFILE="Burnout.txt"
-  export CATNAME="Burnout series"
+  export CATNAME="Séries Burnout"
   $CATEGORIZE
 fi
 
 if [ $TWO -ne 0 ];
 then
   export CATFILE="Burnout2.txt"
-  export CATNAME="Burnout series"
+  export CATNAME="Séries Burnout"
   $CATEGORIZE
 fi
 
 if [ $THREE -ne 0 ];
 then
   export CATFILE="Burnout3.txt"
-  export CATNAME="Burnout series"
+  export CATNAME="Séries Burnout"
   $CATEGORIZE
 fi
 
 if [ $REVENGE -ne 0 ];
 then
   export CATFILE="BurnoutRevenge.txt"
-  export CATNAME="Burnout series"
+  export CATNAME="Séries Burnout"
   $CATEGORIZE
 fi
 
 if [ $LEGENDS -ne 0 ];
 then
   export CATFILE="BurnoutLegends.txt"
-  export CATNAME="Burnout series"
+  export CATNAME="Séries Burnout"
   $CATEGORIZE
 fi
 
 if [ $DOMINATOR -ne 0 ];
 then
   export CATFILE="BurnoutDominator.txt"
-  export CATNAME="Burnout series"
+  export CATNAME="Séries Burnout"
   $CATEGORIZE
 fi
 
@@ -70,7 +70,7 @@ fi
 if [ $CRASH -ne 0 ];
 then
   export CATFILE="BurnoutCrash.txt"
-  export CATNAME="Burnout series"
+  export CATNAME="Séries Burnout"
   $CATEGORIZE
 fi
 

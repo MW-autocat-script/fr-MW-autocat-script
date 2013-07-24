@@ -7,7 +7,7 @@ PLANET=`stat --print=%s LittleBigPlanet.txt`
 if [ $PLANET -ne 0 ];
 then
   export CATFILE="LittleBigPlanet.txt"
-  export CATNAME="LittleBigPlanet series"
+  export CATNAME="Séries LittleBigPlanet"
   $CATEGORIZE
 fi
 

@@ -15,7 +15,7 @@ BIRTHBYSLEEP=`stat --print=%s BirthBySleep.txt`
 if [ $KINGDOMHEARTSSERIES -ne 0 ];
 then
   export CATFILE="KingdomHeartsSeries.txt"
-  export CATNAME="Kingdom Hearts series"
+  export CATNAME="Séries Kingdom Hearts"
   $CATEGORIZE
 fi
 

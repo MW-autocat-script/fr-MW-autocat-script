@@ -280,7 +280,7 @@ fi
 if [ $POKORA -ne 0 ];
 then
   export CATFILE="MPokora.txt"
-  export CATNAME="M.Pokora"
+  export CATNAME="Matt Pokora"
   $CATEGORIZE
 fi
 

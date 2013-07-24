@@ -9,7 +9,7 @@ KEYWORDS_CODBO_EXCLUDE="Black(| )Ops(| )([2-9]{1,}|\bII\b|\bIII\b|\bIV\b|\bV\b)"
 KEYWORDS_CODMW3="\bCOD(| )8|\bMW3\b|Modern(| )Warfare(| )3|Call(| )of(| )Duty(| )8"
 KEYWORDS_CODBO2="\bCOD(| )9|Black Ops (2|II\b)|Call of Duty 9"
 KEYWORDS_CODGHOSTS="\bCOD(| )10|Call(| )Of(| )Duty(\:|)(| )Ghost"
-KEYWORDS_CALLOFDUTYSERIES="Call(| )of(| )Duty|CoD(| )series"
+KEYWORDS_CALLOFDUTYSERIES="Call(| )of(| )Duty|CoD(| )series|Séries(| )Call(| )of(| )Duty"
 KEYWORDS_CALLOFDUTYSERIES_EXCLUDE="$KEYWORDS_COD4|$KEYWORDS_CODWAW|$KEYWORDS_CODBO|$KEYWORDS_CODMW3|$KEYWORDS_CODBO2|$KEYWORDS_CODGHOSTS"
 KEYWORDS_CALLOFDUTYSERIES_CASESENSITIVE="CoD"
 KEYWORDS_CALLOFDUTYSERIES_CASESENSITIVE_EXCLUDE="CoD(| )[0-9]{1,}" 
@@ -36,7 +36,7 @@ GHOSTS=`stat --print=%s Ghosts.txt`
 if [ $CALLOFDUTY -ne 0 ];
 then
   export CATFILE="CallofDuty.txt"
-  export CATNAME="Call of Duty series"
+  export CATNAME="Séries Call of Duty"
   $CATEGORIZE
 fi
 

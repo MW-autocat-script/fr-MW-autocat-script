@@ -11,7 +11,7 @@ THREE=`stat --print=%s Three.txt`
 if [ $SERIES -ne 0 ];
 then
   export CATFILE="Series.txt"
-  export CATNAME="Assassin's Creed series"
+  export CATNAME="Séries Assassin's Creed"
   $CATEGORIZE
 fi
 

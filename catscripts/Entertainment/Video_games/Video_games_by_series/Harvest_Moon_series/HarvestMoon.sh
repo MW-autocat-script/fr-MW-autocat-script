@@ -7,7 +7,7 @@ HARVESTMOON=`stat --print=%s HarvestMoon.txt`
 if [ $HARVESTMOON -ne 0 ];
 then
   export CATFILE="HarvestMoon.txt"
-  export CATNAME="Harvest Moon series"
+  export CATNAME="Séries Harvest Moon"
   $CATEGORIZE
 fi
 

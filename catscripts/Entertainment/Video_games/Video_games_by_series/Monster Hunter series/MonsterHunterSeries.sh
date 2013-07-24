@@ -1,6 +1,6 @@
 #!/bin/bash
 
-egrep -i 'Monster Hunter.+series' newpages.txt >> MonsterHunterSeries.txt
+egrep -i 'Monster Hunter.+series|Séries.+Monster Hunter' newpages.txt >> MonsterHunterSeries.txt
 egrep -i 'Monster Hunter' newpages.txt | egrep -iv '2|3|Freedom|Frontier|series|portable|Tri' >> MonsterHunter.txt
 egrep -i 'Monster Hunter 2\b|MH2\b' newpages.txt >> MH2.txt
 egrep -i 'Monster Hunter Freedom' newpages.txt | egrep -iv '2|Unite' >> MonsterHunterFreedom.txt
@@ -21,7 +21,7 @@ TRI=`stat --print=%s MonsterHunterTri.txt`
 if [ $SERIES -ne 0 ];
 then
   export CATFILE="MonsterHunterSeries.txt"
-  export CATNAME="Monster Hunter series"
+  export CATNAME="Séries Monster Hunter"
   $CATEGORIZE
 fi
 

@@ -14,7 +14,7 @@ OBLIVION=`stat --print=%s Oblivion.txt`
 if [ $SCROLLS -ne 0 ];
 then
   export CATFILE="TheElderScrolls.txt"
-  export CATNAME="The Elder Scrolls series"
+  export CATNAME="Séries The Elder Scrolls"
   $CATEGORIZE
 fi
 

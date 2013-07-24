@@ -30,7 +30,7 @@ TONY=`stat --print=%s GayTony.txt`
 if [ $SERIES -ne 0 ];
 then
   export CATFILE="GTA.txt"
-  export CATNAME="Grand Theft Auto series"
+  export CATNAME="Séries Grand Theft Auto"
   $CATEGORIZE
 fi
 

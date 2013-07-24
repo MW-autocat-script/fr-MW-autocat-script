@@ -1,7 +1,7 @@
 #!/bin/bash
 
-egrep -i "République de Chine" newpages.txt >> China.txt
-egrep -i 'Chine' newpages.txt | egrep -iv 'République de Chine|fine(| )china|princess of China|chine(| )antique|Muraille de Chine|Beijing|Pékin|Hong(| )Kong' >> China.txt #There are two "Republics of China". If one is not named  explicitly, presume the question is about the People's Republic, as it is larger and more internationally recognized
+egrep -i "République populaire de Chine" newpages.txt >> China.txt
+egrep -i '\bChine' newpages.txt | egrep -iv 'République de Chine|fine(| )china|princess of China|chine(| )antique|Muraille de Chine|Beijing|Pékin|Hong(| )Kong' >> China.txt #There are two "Republics of China". If one is not named  explicitly, presume the question is about the People's Republic, as it is larger and more internationally recognized
 egrep -i "Muraille de Chine" newpages.txt >> GreatWall.txt
 egrep -i "Beijing|Pékin" newpages.txt >> Beijing.txt
 egrep -i "Hong(| )Kong" newpages.txt >> HongKong.txt 

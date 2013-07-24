@@ -29,10 +29,10 @@ export CATEGORIZE="./util/Categorize.sh"
 python $PYWIKIPEDIADIR/pagegenerators.py -start:. -pt:1 |sed s'|  [0-9][0-9][0-9][0-9][0-9][0-9]: ||'|sed s'|  [0-9][0-9][0-9][0-9][0-9]: ||'|sed s'|  [0-9][0-9][0-9][0-9]: ||'  | sed s'|  [0-9][0-9][0-9]: ||' | sed s'|  [0-9][0-9]: ||' | sed s'|  [0-9]: ||' > newpages.txt
  
 ./catscripts/Entertainment/Entertainment.sh
-#./catscripts/Government/Government.sh
+./catscripts/Government/Government.sh
 #./catscripts/Language/Language.sh
 #./catscripts/Lifestyle/Lifestyle.sh
-#./catscripts/Maintenance/Maintenance.sh
+./catscripts/Maintenance/Maintenance.sh
 #./catscripts/Math/Math.sh
 #./catscripts/Science/Science.sh
 #./catscripts/Technology/Technology.sh
@@ -41,6 +41,6 @@ python $PYWIKIPEDIADIR/pagegenerators.py -start:. -pt:1 |sed s'|  [0-9][0-9][0-9
 
 #Remove questions that have interrogative words from category 'Page titles lacking an interrogative word'
 
-#./util/noninterrogative.sh
+./util/noninterrogative.sh
 
 rm $PIDFILE

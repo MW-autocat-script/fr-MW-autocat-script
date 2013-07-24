@@ -27,7 +27,7 @@ egrep -i '\bchanteur|\bchanteuse' newpages.txt \
 | egrep -iv 'Lil(| )Wayne' \
 | egrep -iv 'Eminem|Slim Shady|Marshall(| Bruce) Mathers|EMINƎM' \
 | egrep -iv 'Colonel Reyel' \
-| egrep -iv 'tal' \
+| egrep -iv '(^| )tal\b' \
 | egrep -iv 'pokora' \
 >> Singers.txt
 
@@ -56,7 +56,7 @@ egrep -i 'Ashley Tisdale' newpages.txt >> AshleyTisdale.txt
 egrep -i 'Lil(| )Wayne' newpages.txt >> LilWayne.txt
 egrep -i 'Eminem|Slim Shady|Marshall(| Bruce) Mathers|EMINƎM' newpages.txt >> Eminem.txt
 egrep -i 'Colonel Reyel' newpages.txt >> Reyel.txt
-egrep -i 'tal' newpages.txt >> Tal.txt
+egrep -i '(^| )tal\b' newpages.txt >> Tal.txt
 egrep -i 'pokora' newpages.txt >> MPokora.txt
 
 SINGERS=`stat --print=%s Singers.txt`

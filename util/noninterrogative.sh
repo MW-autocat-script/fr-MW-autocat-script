@@ -1,10 +1,10 @@
 #!/bin/bash
 
-python $PYWIKIPEDIADIR/pagegenerators.py -category:"Titres de pages qui n'ont pas un mot interrogatif" |sed s'|[0-9][0-9][0-9][0-9][0-9][0-9]: ||' |sed s'|[0-9][0-9][0-9][0-9][0-9]: ||' |sed s'|[0-9][0-9][0-9][0-9]: ||'  | sed s'| [0-9][0-9][0-9]: ||' | sed s'|  [0-9][0-9]: ||' | sed s'|   [0-9]: ||' > nonint.txt
+python $PYWIKIPEDIADIR/pagegenerators.py -category:"Titres de pages qui n'ont pas un mot interrogatif" |sed s'|[0-9][0-9][0-9][0-9][0-9][0-9]: ||' |sed s'|[0-9][0-9][0-9][0-9][0-9]: ||' |sed s'|[0-9][0-9][0-9][0-9]: ||'  | sed s'| [0-9][0-9][0-9]: ||' | sed s'|  [0-9][0-9]: ||' | sed s'|   [0-9]: ||' > nonint.txt  
 
 egrep -i "\bqui\b" nonint.txt >> Qui.txt
 egrep -i "\bquoi\b" nonint.txt >> Quoi.txt
-egrep -i "\boù\b" nonint.txt >> Où.txt
+egrep -i "(^| )(|D)('|)(| )où( |$)" nonint.txt >> Où.txt
 egrep -i "\bquand\b" nonint.txt >> Quand.txt
 egrep -i "\bpourquoi\b" nonint.txt >> Pourquoi.txt
 egrep -i "\bcomment\b" nonint.txt >> Comment.txt

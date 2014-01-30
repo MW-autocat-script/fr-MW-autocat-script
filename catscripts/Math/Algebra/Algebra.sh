@@ -2,15 +2,29 @@
 
 KEYWORDS_ALGEBRA="Algèbre"
 
-egrep -i "$KEYWORDS_ALGEBRA" newpages.txt >> Algebra.txt
-
-ALGEBRA=`stat --print=%s Algebra.txt`
-
-if [ $ALGEBRA -ne 0 ];
+if [ "$1" == "" ];
 then
-  export CATFILE="Algebra.txt"
-  export CATNAME="Algèbre"
-  $CATEGORIZE
-fi
 
-rm Algebra.txt
+  if [ "$DEBUG" == "yes" ];
+  then
+    printf "Starting Algebra (Algèbre)\n"
+  fi
+
+  ALGEBRA="$(egrep -i "$KEYWORDS_ALGEBRA" newpages.txt)"
+
+  if [ "$ALGEBRA" != "" ];
+  then
+    printf "%s" "$ALGEBRA" > Algebra.txt
+    export CATFILE="Algebra.txt"
+    export CATNAME="Algèbre"
+    $CATEGORIZE
+    rm Algebra.txt
+    unset ALGEBRA
+  fi
+
+  if [ "$DEBUG" == "yes" ];
+  then
+    printf "Finishing Algebra (Algèbre)\n"
+  fi
+
+fi
